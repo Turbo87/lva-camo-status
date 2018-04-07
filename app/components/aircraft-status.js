@@ -14,6 +14,7 @@ export default Component.extend({
   // status: null, // set by the fetchTask
 
   isLoading: alias('updateTask.isRunning'),
+  isError: alias('updateTask.last.isError'),
 
   type: computed('status', function() {
     let status = this.get('status');

@@ -21,6 +21,7 @@ body {
   transition: background-color .2s, color .2s;
 }
 
+.aircraft-status__error,
 .aircraft-status__thumb-up,
 .aircraft-status__thumb-down {
   position: absolute;
@@ -37,6 +38,16 @@ body {
 .aircraft-status--loading {
   background-color: #eee;
   color: #999;
+}
+
+.aircraft-status--error {
+  background: hsla(42, 100%, 50%, 1);
+  color: rgba(0, 0, 0, 0.7);
+  fill: rgba(0, 0, 0, 0.7);
+}
+
+.aircraft-status--error .aircraft-status__error {
+  opacity: 1;
 }
 
 .aircraft-status--ok {

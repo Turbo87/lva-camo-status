@@ -87,3 +87,24 @@ body {
 .aircraft-status__type {
   font-size: 16px;
 }
+
+@media screen and (max-width:400px) {
+  .aircraft-status__callsign {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .aircraft-status__type {
+    display: block;
+    margin: 8px 8px 4px;
+    font-size: 20px;
+  }
+
+  .aircraft-status__refresh,
+  .aircraft-status__error,
+  .aircraft-status__thumb-up,
+  .aircraft-status__thumb-down {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -45,6 +45,9 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+
+    ENV.rootURL = '/lva-camo-status';
+    ENV.locationType = 'hash';
   }
 
   return ENV;

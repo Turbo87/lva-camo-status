@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 import { alias } from '@ember/object/computed';
 
 import fetch from 'fetch';
-import { task } from 'ember-concurrency';
+import { task, timeout } from 'ember-concurrency';
 
 export default Component.extend({
   tagName: '',
@@ -48,8 +48,15 @@ export default Component.extend({
 
   init() {
     this._super(...arguments);
-    this.get('updateTask').perform();
+    this.get('loopTask').perform();
   },
+
+  loopTask: task(function *() {
+    while (true) {
+      yield this.get('updateTask').perform();
+      yield timeout(60000);
+    }
+  }).restartable(),
 
   updateTask: task(function *() {
     let response = yield fetch(`https://api.camo-europe.aero/statuses/${this.get('id')}`);
@@ -63,7 +70,7 @@ export default Component.extend({
 
   actions: {
     refresh() {
-      this.get('updateTask').perform();
+      this.get('loopTask').perform();
     },
   },
 });

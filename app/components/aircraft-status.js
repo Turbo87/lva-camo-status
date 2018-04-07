@@ -60,4 +60,10 @@ export default Component.extend({
     let json = yield response.json();
     return json.data.attributes;
   }).drop(),
+
+  actions: {
+    refresh() {
+      this.get('updateTask').perform();
+    },
+  },
 });

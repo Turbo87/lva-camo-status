@@ -9,6 +9,8 @@ body {
 }
 
 .aircraft-status {
+  position: relative;
+
   margin: 8px;
   padding: 16px;
 
@@ -19,6 +21,19 @@ body {
   transition: background-color .2s, color .2s;
 }
 
+.aircraft-status__thumb-up,
+.aircraft-status__thumb-down {
+  position: absolute;
+
+  right: 16px;
+  top: 16px;
+  width: 52px;
+  height: 52px;
+
+  opacity: 0;
+  transition: opacity .2s;
+}
+
 .aircraft-status--loading {
   background-color: #eee;
   color: #999;
@@ -27,15 +42,26 @@ body {
 .aircraft-status--ok {
   background: hsla(120, 100%, 35%, 1);
   color: rgba(255, 255, 255,0.7);
+  fill: rgba(255, 255, 255,0.7);
+}
+
+.aircraft-status--ok .aircraft-status__thumb-up {
+  opacity: 1;
 }
 
 .aircraft-status--nope {
   background: hsla(0, 100%, 35%, 1);
   color: rgba(255, 255, 255,0.7);
+  fill: rgba(255, 255, 255,0.7);
+}
+
+.aircraft-status--nope .aircraft-status__thumb-down {
+  opacity: 1;
 }
 
 .aircraft-status__callsign {
   font-size: 40px;
+  line-height: 52px;
   margin: 0 8px;
 }
 

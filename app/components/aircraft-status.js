@@ -13,6 +13,7 @@ export default Component.extend({
 
   // status: null, // set by the fetchTask
 
+  status: alias('updateTask.last.value'),
   isLoading: alias('updateTask.isRunning'),
   isError: alias('updateTask.last.isError'),
 
@@ -57,6 +58,6 @@ export default Component.extend({
     }
 
     let json = yield response.json();
-    this.set('status', json.data.attributes);
-  }),
+    return json.data.attributes;
+  }).drop(),
 });

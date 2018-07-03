@@ -1,11 +1,7 @@
 import Application from '@ember/application';
-import loadInitializers from 'ember-load-initializers';
-import defineModifier from 'ember-concurrency-test-waiter/define-modifier';
-
-import config from './config/environment';
 import Resolver from './resolver';
-
-defineModifier();
+import loadInitializers from 'ember-load-initializers';
+import config from './config/environment';
 
 const App = Application.extend({
   modulePrefix: config.modulePrefix,

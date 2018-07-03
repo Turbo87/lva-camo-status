@@ -72,7 +72,7 @@ export default Component.extend({
 
     let json = yield response.json();
     return json.data.attributes;
-  }).drop().withTestWaiter(),
+  }).drop(),
 
   actions: {
     refresh() {

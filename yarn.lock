@@ -2290,9 +2290,9 @@ ember-export-application-global@^2.0.0:
   dependencies:
     ember-cli-babel "^6.0.0-beta.7"
 
-ember-fetch@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/ember-fetch/-/ember-fetch-5.0.0.tgz#fc58980010d625e9d86d238cbaabe7803fdddcfa"
+ember-fetch@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/ember-fetch/-/ember-fetch-5.0.1.tgz#a1acc230be3454dd3c2476aaa72ea05bebbd7f9d"
   dependencies:
     abortcontroller-polyfill "^1.1.9"
     broccoli-concat "^3.2.2"

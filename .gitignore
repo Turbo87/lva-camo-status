@@ -9,6 +9,7 @@
 /bower_components/
 
 # misc
+/.pnp*
 /.sass-cache
 /connect.lock
 /coverage/

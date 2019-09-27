@@ -1,14 +1,12 @@
-import Component from '@ember/component';
 import { computed } from '@ember/object';
 import { alias } from '@ember/object/computed';
+import Component from '@glimmer/component';
 
 import fetch from 'fetch';
 import { task } from 'ember-concurrency';
 import { rawTimeout } from 'ember-concurrency/utils';
 
 export default class extends Component {
-  tagName = '';
-
   // id: null,
   // callsign: null,
 
@@ -18,8 +16,12 @@ export default class extends Component {
   @alias('updateTask.isRunning') isLoading;
   @alias('updateTask.last.isError') isError;
 
-  @computed('status')
+  @computed('args.type', 'status')
   get type() {
+    if (this.args.type) {
+      return this.args.type;
+    }
+
     let { status } = this;
     if (!status) {
       return null;
@@ -50,8 +52,8 @@ export default class extends Component {
         : null;
   }
 
-  init() {
-    super.init(...arguments);
+  constructor() {
+    super(...arguments);
     this.loopTask.perform();
   }
 
@@ -64,7 +66,7 @@ export default class extends Component {
   loopTask;
 
   @(task(function *() {
-    let response = yield fetch(`https://api.camo-europe.aero/statuses/${this.id}`);
+    let response = yield fetch(`https://api.camo-europe.aero/statuses/${this.args.id}`);
     if (!response.ok) {
       throw new Error('API request failed');
     }

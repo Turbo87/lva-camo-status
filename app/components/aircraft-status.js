@@ -6,19 +6,20 @@ import fetch from 'fetch';
 import { task } from 'ember-concurrency';
 import { rawTimeout } from 'ember-concurrency/utils';
 
-export default Component.extend({
-  tagName: '',
+export default class extends Component {
+  tagName = '';
 
   // id: null,
   // callsign: null,
 
   // status: null, // set by the fetchTask
 
-  status: alias('updateTask.last.value'),
-  isLoading: alias('updateTask.isRunning'),
-  isError: alias('updateTask.last.isError'),
+  @alias('updateTask.last.value') status;
+  @alias('updateTask.isRunning') isLoading;
+  @alias('updateTask.last.isError') isError;
 
-  type: computed('status', function() {
+  @computed('status')
+  get type() {
     let { status } = this;
     if (!status) {
       return null;
@@ -27,39 +28,42 @@ export default Component.extend({
     } else {
       return `${status['easa-type']} ${status['easa-variant']}`;
     }
-  }),
+  }
 
-  isAirworthy: computed('status', function() {
+  @computed('status')
+  get isAirworthy() {
     let { status } = this;
     if (!status) {
       return null;
     } else {
       return status.camo === 'airworthy' && (status.ato === 'unknown' || status.ato === 'airworthy');
     }
-  }),
+  }
 
-  airworthinessClass: computed('isAirworthy', function() {
+  @computed('isAirworthy')
+  get airworthinessClass() {
     let airworthy = this.isAirworthy;
     return airworthy === true
       ? 'aircraft-status--ok'
       : airworthy === false
         ? 'aircraft-status--nope'
         : null;
-  }),
+  }
 
   init() {
-    this._super(...arguments);
+    super.init(...arguments);
     this.loopTask.perform();
-  },
+  }
 
-  loopTask: task(function *() {
+  @(task(function *() {
     while (true) {
       yield this.updateTask.perform();
       yield rawTimeout(60000);
     }
-  }).restartable(),
+  }).restartable())
+  loopTask;
 
-  updateTask: task(function *() {
+  @(task(function *() {
     let response = yield fetch(`https://api.camo-europe.aero/statuses/${this.id}`);
     if (!response.ok) {
       throw new Error('API request failed');
@@ -67,5 +71,6 @@ export default Component.extend({
 
     let json = yield response.json();
     return json.data.attributes;
-  }).drop(),
-});
+  }).drop())
+  updateTask;
+}

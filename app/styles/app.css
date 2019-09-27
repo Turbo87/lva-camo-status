@@ -11,11 +11,19 @@ body {
 .aircraft-status {
   position: relative;
 
+  display: block;
+  width: calc(100% - 16px);
   max-width: 450px;
   margin: 8px;
   padding: 16px;
 
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  text-align: left;
+
   background-color: white;
+  border: none;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   cursor: pointer;

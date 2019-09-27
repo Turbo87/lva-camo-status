@@ -1,4 +1,4 @@
-<div
+<button
   title={{this.updateTask.last.error}}
   class="aircraft-status {{this.airworthinessClass}} {{if this.isLoading "aircraft-status--loading"}} {{if this.isError "aircraft-status--error"}}"
   onclick={{action "refresh"}}>
@@ -10,4 +10,4 @@
   {{svg-jar "thumb-down" width="24" height="24" class="aircraft-status__thumb-down"}}
   {{svg-jar "error" width="24" height="24" class="aircraft-status__error"}}
   {{svg-jar "refresh" width="24" height="24" class="aircraft-status__refresh"}}
-</div>
+</button>

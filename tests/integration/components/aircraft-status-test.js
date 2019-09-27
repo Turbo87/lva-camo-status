@@ -41,7 +41,7 @@ module('Integration | Component | aircraft-status', function(hooks) {
       return [200, {"Content-Type": "application/json"}, JSON.stringify(response)];
     });
 
-    await render(hbs`{{aircraft-status id="WTsHJRdZ" callsign="D-8784"}}`);
+    await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
     assert.dom('.aircraft-status').hasClass('aircraft-status--ok');
     assert.dom('.aircraft-status__callsign').hasText('D-8784');
@@ -73,7 +73,7 @@ module('Integration | Component | aircraft-status', function(hooks) {
       return [200, {"Content-Type": "application/json"}, JSON.stringify(response)];
     });
 
-    await render(hbs`{{aircraft-status id="WTsHJRdZ" callsign="D-8784"}}`);
+    await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
     assert.dom('.aircraft-status').hasClass('aircraft-status--nope');
     assert.dom('.aircraft-status__callsign').hasText('D-8784');
@@ -105,7 +105,7 @@ module('Integration | Component | aircraft-status', function(hooks) {
       return [200, {"Content-Type": "application/json"}, JSON.stringify(response)];
     });
 
-    await render(hbs`{{aircraft-status id="WTsHJRdZ" callsign="D-8784" type="AlphaJet"}}`);
+    await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784" @type="AlphaJet"/>`);
 
     assert.dom('.aircraft-status').hasClass('aircraft-status--ok');
     assert.dom('.aircraft-status__callsign').hasText('D-8784');
@@ -139,7 +139,7 @@ module('Integration | Component | aircraft-status', function(hooks) {
       return deferred.promise.then(() => [200, {"Content-Type": "application/json"}, JSON.stringify(response)]);
     });
 
-    render(hbs`{{aircraft-status id="WTsHJRdZ" callsign="D-8784"}}`);
+    render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
     await waitFor('.aircraft-status');
     assert.dom('.aircraft-status').hasClass('aircraft-status--loading');

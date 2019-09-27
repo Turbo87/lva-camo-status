@@ -1,4 +1,3 @@
-import { computed } from '@ember/object';
 import { alias } from '@ember/object/computed';
 import Component from '@glimmer/component';
 
@@ -16,7 +15,6 @@ export default class extends Component {
   @alias('updateTask.isRunning') isLoading;
   @alias('updateTask.last.isError') isError;
 
-  @computed('args.type', 'status')
   get type() {
     if (this.args.type) {
       return this.args.type;
@@ -32,7 +30,6 @@ export default class extends Component {
     }
   }
 
-  @computed('status')
   get isAirworthy() {
     let { status } = this;
     if (!status) {
@@ -42,7 +39,6 @@ export default class extends Component {
     }
   }
 
-  @computed('isAirworthy')
   get airworthinessClass() {
     let airworthy = this.isAirworthy;
     return airworthy === true

@@ -1,7 +1,7 @@
 <button
   title={{this.updateTask.last.error}}
   class="aircraft-status {{this.airworthinessClass}} {{if this.isLoading "aircraft-status--loading"}} {{if this.isError "aircraft-status--error"}}"
-  onclick={{action "refresh"}}>
+  {{on "click" (perform loopTask)}}>
 
   <span class="aircraft-status__callsign">{{@callsign}}</span>
   <span class="aircraft-status__type">{{this.type}}</span>

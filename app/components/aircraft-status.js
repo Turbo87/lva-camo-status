@@ -19,7 +19,7 @@ export default Component.extend({
   isError: alias('updateTask.last.isError'),
 
   type: computed('status', function() {
-    let status = this.get('status');
+    let { status } = this;
     if (!status) {
       return null;
     } else if (status['easa-type'] === status['easa-variant']) {
@@ -30,7 +30,7 @@ export default Component.extend({
   }),
 
   isAirworthy: computed('status', function() {
-    let status = this.get('status');
+    let { status } = this;
     if (!status) {
       return null;
     } else {
@@ -39,7 +39,7 @@ export default Component.extend({
   }),
 
   airworthinessClass: computed('isAirworthy', function() {
-    let airworthy = this.get('isAirworthy');
+    let airworthy = this.isAirworthy;
     return airworthy === true
       ? 'aircraft-status--ok'
       : airworthy === false
@@ -49,18 +49,18 @@ export default Component.extend({
 
   init() {
     this._super(...arguments);
-    this.get('loopTask').perform();
+    this.loopTask.perform();
   },
 
   loopTask: task(function *() {
     while (true) {
-      yield this.get('updateTask').perform();
+      yield this.updateTask.perform();
       yield rawTimeout(60000);
     }
   }).restartable(),
 
   updateTask: task(function *() {
-    let response = yield fetch(`https://api.camo-europe.aero/statuses/${this.get('id')}`);
+    let response = yield fetch(`https://api.camo-europe.aero/statuses/${this.id}`);
     if (!response.ok) {
       throw new Error('API request failed');
     }

@@ -3669,10 +3669,10 @@ ember-cli-version-checker@^3.0.0, ember-cli-version-checker@^3.1.3:
     resolve-package-path "^1.2.6"
     semver "^5.6.0"
 
-ember-cli@~3.13.0:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.13.0.tgz#98807a5e1e086380364728a8a476f4c007181496"
-  integrity sha512-2B/bmlwf8390X9JYEMxMcPfgp1wnNsqIJ9aaneZ71XuNaSbjHQuEnG3zD1CI81SWlXW+nEydry9pJKy29dsQow==
+ember-cli@~3.13.1:
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.13.1.tgz#8daefb108130740cd79ad7e4e1c9138fb1f7313d"
+  integrity sha512-CMVLpJYseyCNmN2Tp3vTmTFTXPSZlMQB7q2uoZ+ZTKMgdQ4ekeceW9mVAC4XwXm2FW+v8liowP+co/Bu1xUbPg==
   dependencies:
     "@babel/core" "^7.5.5"
     "@babel/plugin-transform-modules-amd" "^7.5.0"
@@ -5901,14 +5901,7 @@ lodash.support@~2.3.0:
   dependencies:
     lodash._renative "~2.3.0"
 
-lodash.template@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/lodash.template/-/lodash.template-4.4.0.tgz#e73a0385c8355591746e020b99679c690e68fba0"
-  dependencies:
-    lodash._reinterpolate "~3.0.0"
-    lodash.templatesettings "^4.0.0"
-
-lodash.template@^4.5.0:
+lodash.template@^4.4.0, lodash.template@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.template/-/lodash.template-4.5.0.tgz#f976195cf3f347d0d5f52483569fe8031ccce8ab"
   integrity sha512-84vYFxIkmidUiFxidA/KjjH9pAycqW+h980j7Fuz5qxRtO9pgB7MDFTdys1N7A5mcucRiDyEq4fusljItR1T/A==
@@ -7279,12 +7272,7 @@ rsvp@^3.0.14, rsvp@^3.0.17, rsvp@^3.0.18, rsvp@^3.0.21, rsvp@^3.0.6, rsvp@^3.1.0
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-3.6.2.tgz#2e96491599a96cde1b515d5674a8f7a91452926a"
 
-rsvp@^4.6.1, rsvp@^4.7.0, rsvp@^4.8.1, rsvp@^4.8.2, rsvp@^4.8.4:
-  version "4.8.4"
-  resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.4.tgz#b50e6b34583f3dd89329a2f23a8a2be072845911"
-  integrity sha512-6FomvYPfs+Jy9TfXmBpBuMWNH94SgCsZmJKcanySzgNNP6LjWxBvyLTa9KaMfDDM5oxRfrKDB0r/qeRsLwnBfA==
-
-rsvp@^4.8.5:
+rsvp@^4.6.1, rsvp@^4.7.0, rsvp@^4.8.1, rsvp@^4.8.2, rsvp@^4.8.4, rsvp@^4.8.5:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
   integrity sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA==

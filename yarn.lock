@@ -3900,10 +3900,10 @@ ember-source@~3.13.2:
     resolve "^1.11.1"
     silent-error "^1.1.1"
 
-ember-svg-jar@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/ember-svg-jar/-/ember-svg-jar-2.2.2.tgz#024e298dd65d0e23f98c8be5706035de819a647f"
-  integrity sha512-AeOG3egRAM6QXNB4LX4coBkyxQjXGIzXY3i5XcaDuf861+e79yD7L9PZwhb7fBWfwwn8ls479x1hfT1Yw5QAWw==
+ember-svg-jar@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/ember-svg-jar/-/ember-svg-jar-2.2.3.tgz#632f8d6a999ceb1c815a135fbc2bd681b856330b"
+  integrity sha512-17kBxi5IfsEnCsVuFTjVs+HEAa3sfdB4t4C+5GZUxWixEbK8hwoRDsuvsboOGhDemycVv21GAyexcTeinabsnQ==
   dependencies:
     broccoli-caching-writer "^3.0.3"
     broccoli-concat "^3.7.4"
@@ -5955,12 +5955,7 @@ lodash.values@~2.3.0:
   dependencies:
     lodash.keys "~2.3.0"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5:
-  version "4.17.14"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
-  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
-
-lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.15:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.17.5:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==

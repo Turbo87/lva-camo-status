@@ -43,7 +43,7 @@
     "ember-load-initializers": "^2.1.1",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^7.0.0",
-    "ember-source": "~3.16.3",
+    "ember-source": "~3.18.0",
     "ember-svg-jar": "^2.2.3",
     "eslint-plugin-ember": "^7.11.0",
     "loader.js": "^4.7.0",

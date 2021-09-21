@@ -31,7 +31,7 @@ specifiers:
   ember-svg-jar: 2.3.3
   eslint-plugin-ember: 8.14.0
   loader.js: 4.7.0
-  qunit-dom: 1.6.0
+  qunit-dom: 2.0.0
 
 devDependencies:
   '@ember/edition-utils': 1.2.0
@@ -64,7 +64,7 @@ devDependencies:
   ember-svg-jar: 2.3.3
   eslint-plugin-ember: 8.14.0
   loader.js: 4.7.0
-  qunit-dom: 1.6.0
+  qunit-dom: 2.0.0
 
 packages:
 
@@ -7727,9 +7727,9 @@ packages:
       underscore.string: 3.3.5
     dev: true
 
-  /qunit-dom/1.6.0:
-    resolution: {integrity: sha512-YwSqcLjQcRI0fUFpaSWwU10KIJPFW5Qh+d3cT5DOgx81dypRuUSiPkKFmBY/CDs/R1KdHRadthkcXg2rqAon8Q==}
-    engines: {node: 10.* || >= 12.*}
+  /qunit-dom/2.0.0:
+    resolution: {integrity: sha512-mElzLN99wYPOGekahqRA+mq7NcThXY9c+/tDkgJmT7W5LeZAFNyITr2rFKNnCbWLIhuLdFw88kCBMrJSfyBYpA==}
+    engines: {node: 12.* || 14.* || >= 16.*}
     dependencies:
       broccoli-funnel: 3.0.8
       broccoli-merge-trees: 4.2.0

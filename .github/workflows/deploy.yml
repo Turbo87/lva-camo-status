@@ -1,0 +1,40 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+
+      - run: npm install -g pnpm@6
+      - run: pnpm install
+      - run: pnpm build
+
+      - uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+
+      - uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          CLEAN: true
+          FOLDER: dist
+          GIT_CONFIG_NAME: LV Aachen e.V.
+          GIT_CONFIG_EMAIL: bot@lv-aachen.de
+          SINGLE_COMMIT: true
+          SSH: true

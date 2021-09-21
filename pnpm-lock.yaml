@@ -27,7 +27,7 @@ specifiers:
   ember-load-initializers: 2.1.2
   ember-maybe-import-regenerator: 0.1.6
   ember-resolver: 8.0.3
-  ember-source: 3.22.1
+  ember-source: 3.22.2
   ember-svg-jar: 2.3.3
   eslint-plugin-ember: 8.14.0
   loader.js: 4.7.0
@@ -60,7 +60,7 @@ devDependencies:
   ember-load-initializers: 2.1.2
   ember-maybe-import-regenerator: 0.1.6
   ember-resolver: 8.0.3
-  ember-source: 3.22.1
+  ember-source: 3.22.2
   ember-svg-jar: 2.3.3
   eslint-plugin-ember: 8.14.0
   loader.js: 4.7.0
@@ -4686,8 +4686,8 @@ packages:
       node-fetch: 2.6.4
     dev: true
 
-  /ember-source/3.22.1:
-    resolution: {integrity: sha512-wcevt5CIOQFOv69Cd/EfoyK7+w2PirBJt5ZoTLnVqYliJWktTbF6T2awz6IABNT/Lm+WrDOCEWGtykbQ2k0Kdg==}
+  /ember-source/3.22.2:
+    resolution: {integrity: sha512-P8IQkVd4iXDf0y+2PCEnCJDxZTOyiU1vfebzvXbW6NnoDsOoVP0xvGgoHV2bGFoskCMe4ViYNjuHirfjWvr5CA==}
     engines: {node: 10.* || >= 12.*}
     dependencies:
       '@babel/helper-module-imports': 7.15.4

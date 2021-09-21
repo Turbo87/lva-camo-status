@@ -29,6 +29,7 @@ specifiers:
   eslint: 7.32.0
   eslint-plugin-ember: 8.14.0
   loader.js: 4.7.0
+  macro-decorators: 0.1.2
   qunit-dom: 2.0.0
   webpack: 5.53.0
 
@@ -61,6 +62,7 @@ devDependencies:
   eslint: 7.32.0
   eslint-plugin-ember: 8.14.0
   loader.js: 4.7.0
+  macro-decorators: 0.1.2
   qunit-dom: 2.0.0
   webpack: 5.53.0
 
@@ -7127,6 +7129,10 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: true
+
+  /macro-decorators/0.1.2:
+    resolution: {integrity: sha512-BV5XPmCm9kPSMtgfZiv0vTjOooe5pTIPIVkdoqbC49H1B7z22KB39H50R2ZNclZDQlmVyviLozRatKnOYZkwzg==}
     dev: true
 
   /magic-string/0.24.1:

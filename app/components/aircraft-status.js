@@ -1,8 +1,8 @@
-import { alias } from '@ember/object/computed';
 import Component from '@glimmer/component';
 
 import fetch from 'fetch';
 import { restartableTask, dropTask, rawTimeout } from 'ember-concurrency';
+import { reads } from 'macro-decorators';
 
 export default class extends Component {
   // id: null,
@@ -10,9 +10,9 @@ export default class extends Component {
 
   // status: null, // set by the fetchTask
 
-  @alias('updateTask.last.value') status;
-  @alias('updateTask.isRunning') isLoading;
-  @alias('updateTask.last.isError') isError;
+  @reads('updateTask.last.value') status;
+  @reads('updateTask.isRunning') isLoading;
+  @reads('updateTask.last.isError') isError;
 
   get type() {
     if (this.args.type) {

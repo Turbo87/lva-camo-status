@@ -18,8 +18,9 @@ jobs:
         with:
           node-version: 12.x
 
-      - run: yarn install
-      - run: yarn lint:js
+      - run: npm install -g pnpm@6
+      - run: pnpm install
+      - run: pnpm lint:js
 
   test:
     name: Tests
@@ -31,5 +32,6 @@ jobs:
         with:
           node-version: 12.x
 
-      - run: yarn install
-      - run: yarn test
+      - run: npm install -g pnpm@6
+      - run: pnpm install
+      - run: pnpm test

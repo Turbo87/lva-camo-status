@@ -2,7 +2,7 @@ import { alias } from '@ember/object/computed';
 import Component from '@glimmer/component';
 
 import fetch from 'fetch';
-import { task, rawTimeout } from 'ember-concurrency';
+import { restartableTask, dropTask, rawTimeout } from 'ember-concurrency';
 
 export default class extends Component {
   // id: null,
@@ -52,15 +52,14 @@ export default class extends Component {
     this.loopTask.perform();
   }
 
-  @(task(function *() {
+  @restartableTask *loopTask() {
     while (true) {
       yield this.updateTask.perform();
       yield rawTimeout(60000);
     }
-  }).restartable())
-  loopTask;
+  }
 
-  @(task(function *() {
+  @dropTask *updateTask() {
     let response = yield fetch(`https://api.camo-europe.aero/statuses/${this.args.id}`);
     if (!response.ok) {
       throw new Error('API request failed');
@@ -68,6 +67,5 @@ export default class extends Component {
 
     let json = yield response.json();
     return json.data.attributes;
-  }).drop())
-  updateTask;
+  }
 }

@@ -25,7 +25,7 @@ specifiers:
   ember-export-application-global: 2.0.1
   ember-fetch: 8.0.5
   ember-load-initializers: 2.1.2
-  ember-maybe-import-regenerator: 0.1.6
+  ember-maybe-import-regenerator: 1.0.0
   ember-resolver: 8.0.3
   ember-source: 3.22.1
   ember-svg-jar: 2.3.3
@@ -58,7 +58,7 @@ devDependencies:
   ember-export-application-global: 2.0.1
   ember-fetch: 8.0.5
   ember-load-initializers: 2.1.2
-  ember-maybe-import-regenerator: 0.1.6
+  ember-maybe-import-regenerator: 1.0.0
   ember-resolver: 8.0.3
   ember-source: 3.22.1
   ember-svg-jar: 2.3.3
@@ -4631,6 +4631,18 @@ packages:
       regenerator-runtime: 0.9.6
     transitivePeerDependencies:
       - '@babel/core'
+    dev: true
+
+  /ember-maybe-import-regenerator/1.0.0:
+    resolution: {integrity: sha512-wtjgjEV0Hk4fgiAwFjOfPrGWfmFrbRW3zgNZO4oA3H5FlbMssMvWuR8blQ3QSWYHODVK9r+ThsRAs8lG4kbxqA==}
+    engines: {node: '>= 12.*'}
+    dependencies:
+      broccoli-funnel: 2.0.2
+      broccoli-merge-trees: 3.0.2
+      ember-cli-babel: 7.26.6
+      regenerator-runtime: 0.13.9
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /ember-qunit/3.5.3:

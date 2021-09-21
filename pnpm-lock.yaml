@@ -26,7 +26,7 @@ specifiers:
   ember-fetch: 8.0.5
   ember-load-initializers: 2.1.2
   ember-maybe-import-regenerator: 0.1.6
-  ember-resolver: 8.0.2
+  ember-resolver: 8.0.3
   ember-source: 3.22.1
   ember-svg-jar: 2.3.3
   eslint-plugin-ember: 8.14.0
@@ -59,7 +59,7 @@ devDependencies:
   ember-fetch: 8.0.5
   ember-load-initializers: 2.1.2
   ember-maybe-import-regenerator: 0.1.6
-  ember-resolver: 8.0.2
+  ember-resolver: 8.0.3
   ember-source: 3.22.1
   ember-svg-jar: 2.3.3
   eslint-plugin-ember: 8.14.0
@@ -2555,6 +2555,7 @@ packages:
 
   /bindings/1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
     dependencies:
       file-uri-to-path: 1.0.0
     dev: true
@@ -4647,8 +4648,8 @@ packages:
       - '@babel/core'
     dev: true
 
-  /ember-resolver/8.0.2:
-    resolution: {integrity: sha512-BmCoPT8nf5uv0g2QkhMsrG1Gmu6MtXd6igfhCVzCTMTwZ97SxhJKqoMY62EP/av5HVSWBC/Sa1uGU5cQvX1Aog==}
+  /ember-resolver/8.0.3:
+    resolution: {integrity: sha512-fA53fxfG821BRqNiB9mQDuzZpzSRcSAYZTYBlRQOHsJwoYdjyE7idz4YcytbSsa409G5J2kP6B+PiKOBh0odlw==}
     engines: {node: '>= 10.*'}
     dependencies:
       babel-plugin-debug-macros: 0.3.4
@@ -5290,6 +5291,7 @@ packages:
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -7133,6 +7135,7 @@ packages:
 
   /nan/2.15.0:
     resolution: {integrity: sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==}
+    requiresBuild: true
     dev: true
     optional: true
 

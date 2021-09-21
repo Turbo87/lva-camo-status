@@ -2,8 +2,7 @@ import { alias } from '@ember/object/computed';
 import Component from '@glimmer/component';
 
 import fetch from 'fetch';
-import { task } from 'ember-concurrency';
-import { rawTimeout } from 'ember-concurrency/utils';
+import { task, rawTimeout } from 'ember-concurrency';
 
 export default class extends Component {
   // id: null,

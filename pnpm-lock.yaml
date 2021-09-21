@@ -7,7 +7,7 @@ specifiers:
   babel-eslint: 10.1.0
   broccoli-asset-rev: 3.0.0
   ember-cli: 3.28.0
-  ember-cli-app-version: 4.0.0
+  ember-cli-app-version: 5.0.0
   ember-cli-babel: 7.26.6
   ember-cli-dependency-checker: 3.2.0
   ember-cli-deploy: 1.0.2
@@ -40,7 +40,7 @@ devDependencies:
   babel-eslint: 10.1.0
   broccoli-asset-rev: 3.0.0
   ember-cli: 3.28.0
-  ember-cli-app-version: 4.0.0
+  ember-cli-app-version: 5.0.0
   ember-cli-babel: 7.26.6
   ember-cli-dependency-checker: 3.2.0
   ember-cli-deploy: 1.0.2
@@ -4022,9 +4022,9 @@ packages:
       - '@babel/core'
     dev: true
 
-  /ember-cli-app-version/4.0.0:
-    resolution: {integrity: sha512-YRH1r4vjA9ZIgTVJ38zWxhtt4SCzIHb0ppEsO/z+JV0ZTQlS3+2dT5RhJWz7O3dyw5FWnlIng+gPRoQEz1umHA==}
-    engines: {node: '>= 10.*'}
+  /ember-cli-app-version/5.0.0:
+    resolution: {integrity: sha512-afhx/CXDOMNXzoe4NDPy5WUfxWmYYHUzMCiTyvPBxCDBXYcMrtxNWxvgaSaeqcoHVEmqzeyBj8V82tzmT1dcyw==}
+    engines: {node: 10.* || >= 12}
     dependencies:
       ember-cli-babel: 7.26.6
       git-repo-info: 2.1.1

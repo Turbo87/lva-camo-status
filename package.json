@@ -47,7 +47,7 @@
     "loader.js": "4.7.0",
     "macro-decorators": "0.1.2",
     "qunit-dom": "2.0.0",
-    "webpack": "5.55.1"
+    "webpack": "5.56.0"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"

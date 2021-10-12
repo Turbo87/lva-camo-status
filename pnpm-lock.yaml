@@ -27,7 +27,7 @@ specifiers:
   ember-source: 3.28.1
   ember-svg-jar: 2.3.3
   eslint: 7.32.0
-  eslint-plugin-ember: 10.5.5
+  eslint-plugin-ember: 10.5.6
   loader.js: 4.7.0
   macro-decorators: 0.1.2
   qunit-dom: 2.0.0
@@ -60,7 +60,7 @@ devDependencies:
   ember-source: 3.28.1
   ember-svg-jar: 2.3.3
   eslint: 7.32.0
-  eslint-plugin-ember: 10.5.5_eslint@7.32.0
+  eslint-plugin-ember: 10.5.6_eslint@7.32.0
   loader.js: 4.7.0
   macro-decorators: 0.1.2
   qunit-dom: 2.0.0
@@ -5057,8 +5057,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-plugin-ember/10.5.5_eslint@7.32.0:
-    resolution: {integrity: sha512-yuNiGyOT2pRaGcifJo9H5RU5XlHiVUXvNuAlLBXrTQyZtsOYFBsXgEhMCCq4BVV/0Q79SqXG+03ceB1YtoJHEQ==}
+  /eslint-plugin-ember/10.5.6_eslint@7.32.0:
+    resolution: {integrity: sha512-07R1wxKQ8otuD6k0dEOvahztgsFt2tnGV1V8Uj0d2SX0KsGGrpAIQRiEmlaQ1nd0DpgpszbhOBvsMLV4F/CtIQ==}
     engines: {node: 10.* || 12.* || >= 14}
     peerDependencies:
       eslint: '>= 6'
@@ -5068,6 +5068,7 @@ packages:
       ember-rfc176-data: 0.3.17
       eslint: 7.32.0
       eslint-utils: 3.0.0_eslint@7.32.0
+      estraverse: 5.2.0
       lodash.kebabcase: 4.1.1
       requireindex: 1.2.0
       snake-case: 3.0.4

@@ -7,7 +7,7 @@ specifiers:
   babel-eslint: 10.1.0
   broccoli-asset-rev: 3.0.0
   ember-auto-import: 2.2.2
-  ember-cli: 3.28.1
+  ember-cli: 3.28.2
   ember-cli-app-version: 5.0.0
   ember-cli-babel: 7.26.6
   ember-cli-dependency-checker: 3.2.0
@@ -40,7 +40,7 @@ devDependencies:
   babel-eslint: 10.1.0_eslint@7.32.0
   broccoli-asset-rev: 3.0.0
   ember-auto-import: 2.2.2_webpack@5.58.2
-  ember-cli: 3.28.1
+  ember-cli: 3.28.2
   ember-cli-app-version: 5.0.0
   ember-cli-babel: 7.26.6
   ember-cli-dependency-checker: 3.2.0
@@ -4611,8 +4611,8 @@ packages:
       silent-error: 1.1.1
     dev: true
 
-  /ember-cli/3.28.1:
-    resolution: {integrity: sha512-1SgI4RWJor4yyQIZJvz1egPTYeNUwO5cm4YFXfozU1e5iKcIHM8M2UrGCf3GSGyaFptIxMaDBD3o7GJBnrAb1g==}
+  /ember-cli/3.28.2:
+    resolution: {integrity: sha512-TZ6Q3e1OerrLrmEUvSQgV2ubffvydV3gXE1dYnY2WKC7/BEpiN6ymfY0msQfo/Ml0xPDL3vN/9avTVWMeqkWOQ==}
     engines: {node: '>= 12'}
     hasBin: true
     dependencies:
@@ -9869,7 +9869,7 @@ packages:
   /wide-align/1.1.3:
     resolution: {integrity: sha512-QGkOQc8XL6Bt5PwnsExKBPuMKBxnGxWWW3fU55Xt4feHozMUhdUMaBCk290qpm/wG5u/RSKzwdAC4i51YigihA==}
     dependencies:
-      string-width: 1.0.2
+      string-width: 2.1.1
     dev: true
 
   /word-wrap/1.2.3:

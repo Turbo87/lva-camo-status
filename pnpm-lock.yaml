@@ -7,7 +7,7 @@ specifiers:
   babel-eslint: 10.1.0
   broccoli-asset-rev: 3.0.0
   ember-auto-import: 2.2.2
-  ember-cli: 3.28.2
+  ember-cli: 3.28.3
   ember-cli-app-version: 5.0.0
   ember-cli-babel: 7.26.6
   ember-cli-dependency-checker: 3.2.0
@@ -40,7 +40,7 @@ devDependencies:
   babel-eslint: 10.1.0_eslint@7.32.0
   broccoli-asset-rev: 3.0.0
   ember-auto-import: 2.2.2_webpack@5.58.2
-  ember-cli: 3.28.2
+  ember-cli: 3.28.3
   ember-cli-app-version: 5.0.0
   ember-cli-babel: 7.26.6
   ember-cli-dependency-checker: 3.2.0
@@ -4649,8 +4649,8 @@ packages:
       silent-error: 1.1.1
     dev: true
 
-  /ember-cli/3.28.2:
-    resolution: {integrity: sha512-TZ6Q3e1OerrLrmEUvSQgV2ubffvydV3gXE1dYnY2WKC7/BEpiN6ymfY0msQfo/Ml0xPDL3vN/9avTVWMeqkWOQ==}
+  /ember-cli/3.28.3:
+    resolution: {integrity: sha512-DddAQAddbyaOU4NAjTt8g+FoCCK/F00kbj9pcHO1lfAUpIUS9JPBoWxxZ3qO08mUNXi50pdQSPVVRWzN7mNz2g==}
     engines: {node: '>= 12'}
     hasBin: true
     dependencies:

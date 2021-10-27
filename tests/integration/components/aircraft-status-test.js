@@ -90,6 +90,21 @@ module('Integration | Component | aircraft-status', function (hooks) {
     assert.dom('[data-test-type]').hasText('ASK 21');
   });
 
+  test('it renders error state correctly', async function (assert) {
+    this.server.get(
+      'https://api.camo-europe.aero/statuses/WTsHJRdZ',
+      function () {
+        return [500, {}, JSON.stringify({})];
+      }
+    );
+
+    await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
+
+    assert.dom('button').hasAttribute('data-status', 'error');
+    assert.dom('[data-test-callsign]').hasText('D-8784');
+    assert.dom('[data-test-type]').hasNoText();
+  });
+
   test('can override aircraft type', async function (assert) {
     this.server.get(
       'https://api.camo-europe.aero/statuses/WTsHJRdZ',

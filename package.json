@@ -45,7 +45,7 @@
     "ember-source": "3.28.4",
     "ember-svg-jar": "2.3.3",
     "ember-test-selectors": "6.0.0",
-    "eslint": "7.32.0",
+    "eslint": "8.1.0",
     "eslint-plugin-ember": "10.5.7",
     "loader.js": "4.7.0",
     "macro-decorators": "0.1.2",

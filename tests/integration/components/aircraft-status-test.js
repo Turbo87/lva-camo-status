@@ -27,6 +27,28 @@ const AIRWORTHY_RESPONSE = {
   },
 };
 
+const PREWARNING_RESPONSE = {
+  data: {
+    id: 'WTsHJRdZ',
+    type: 'status',
+    attributes: {
+      timestamp: '2018-05-30T08:13:21+00:00',
+      camo: 'prewarning',
+      ato: 'unknown',
+      'easa-type': 'ASK 21',
+      'easa-variant': 'ASK 21',
+    },
+    relationships: { aircraft: { data: { id: 'WTsHJRdZ', type: 'aircraft' } } },
+    included: [
+      {
+        id: 'WTsHJRdZ',
+        type: 'aircraft',
+        attributes: { 'easa-type': 'ASK 21', 'easa-variant': 'ASK 21' },
+      },
+    ],
+  },
+};
+
 let GROUNDED_RESPONSE = {
   data: {
     id: 'WTsHJRdZ',
@@ -86,6 +108,21 @@ module('Integration | Component | aircraft-status', function (hooks) {
     await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
     assert.dom('button').hasAttribute('data-status', 'grounded');
+    assert.dom('[data-test-callsign]').hasText('D-8784');
+    assert.dom('[data-test-type]').hasText('ASK 21');
+  });
+
+  test('it renders prewarning correctly', async function (assert) {
+    this.server.get(
+      'https://api.camo-europe.aero/statuses/WTsHJRdZ',
+      function () {
+        return [200, {}, JSON.stringify(PREWARNING_RESPONSE)];
+      }
+    );
+
+    await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
+
+    assert.dom('button').hasAttribute('data-status', 'prewarning');
     assert.dom('[data-test-callsign]').hasText('D-8784');
     assert.dom('[data-test-type]').hasText('ASK 21');
   });

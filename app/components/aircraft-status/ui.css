@@ -21,14 +21,14 @@
 
   transition: background-color .2s, color .2s;
 
-  &[data-status="error"] {
-    background: hsla(42, 100%, 50%, 1);
-    color: rgba(0, 0, 0, 0.7);
-  }
-
   &[data-status="airworthy"] {
     background: hsla(120, 100%, 35%, 1);
     color: rgba(255, 255, 255,0.7);
+  }
+
+  &[data-status="prewarning"] {
+    background: hsla(42, 100%, 50%, 1);
+    color: rgba(0, 0, 0, 0.7);
   }
 
   &[data-status="grounded"] {
@@ -70,6 +70,14 @@
   composes: icon;
 
   [data-status="airworthy"] & {
+    opacity: 1;
+  }
+}
+
+.icon__warning {
+  composes: icon;
+
+  [data-status="prewarning"] & {
     opacity: 1;
   }
 }

@@ -63,9 +63,9 @@ module('Integration | Component | aircraft-status', function(hooks) {
 
     await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
-    assert.dom('.aircraft-status').hasClass('aircraft-status--ok');
-    assert.dom('.aircraft-status__callsign').hasText('D-8784');
-    assert.dom('.aircraft-status__type').hasText('ASK 21');
+    assert.dom('[data-test-button]').hasClass('aircraft-status--ok');
+    assert.dom('[data-test-callsign]').hasText('D-8784');
+    assert.dom('[data-test-type]').hasText('ASK 21');
   });
 
   test('it renders grounded correctly', async function(assert) {
@@ -75,9 +75,9 @@ module('Integration | Component | aircraft-status', function(hooks) {
 
     await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
-    assert.dom('.aircraft-status').hasClass('aircraft-status--nope');
-    assert.dom('.aircraft-status__callsign').hasText('D-8784');
-    assert.dom('.aircraft-status__type').hasText('ASK 21');
+    assert.dom('[data-test-button]').hasClass('aircraft-status--nope');
+    assert.dom('[data-test-callsign]').hasText('D-8784');
+    assert.dom('[data-test-type]').hasText('ASK 21');
   });
 
   test('can override aircraft type', async function(assert) {
@@ -87,9 +87,9 @@ module('Integration | Component | aircraft-status', function(hooks) {
 
     await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784" @type="AlphaJet"/>`);
 
-    assert.dom('.aircraft-status').hasClass('aircraft-status--ok');
-    assert.dom('.aircraft-status__callsign').hasText('D-8784');
-    assert.dom('.aircraft-status__type').hasText('AlphaJet');
+    assert.dom('[data-test-button]').hasClass('aircraft-status--ok');
+    assert.dom('[data-test-callsign]').hasText('D-8784');
+    assert.dom('[data-test-type]').hasText('AlphaJet');
   });
 
   test('shows loading indicator while loading', async function(assert) {
@@ -101,8 +101,8 @@ module('Integration | Component | aircraft-status', function(hooks) {
 
     render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
-    await waitFor('.aircraft-status');
-    assert.dom('.aircraft-status').hasClass('aircraft-status--loading');
+    await waitFor('[data-test-button]');
+    assert.dom('[data-test-button]').hasClass('aircraft-status--loading');
 
     deferred.resolve();
   });

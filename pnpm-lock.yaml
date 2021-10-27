@@ -24,6 +24,7 @@ specifiers:
   ember-resolver: 8.0.3
   ember-source: 3.28.4
   ember-svg-jar: 2.3.3
+  ember-test-selectors: 6.0.0
   eslint: 7.32.0
   eslint-plugin-ember: 10.5.7
   loader.js: 4.7.0
@@ -61,6 +62,7 @@ devDependencies:
   ember-resolver: 8.0.3
   ember-source: 3.28.4
   ember-svg-jar: 2.3.3
+  ember-test-selectors: 6.0.0
   eslint: 7.32.0
   eslint-plugin-ember: 10.5.7_eslint@7.32.0
   loader.js: 4.7.0
@@ -4919,6 +4921,17 @@ packages:
       lodash: 4.17.21
       mkdirp: 0.5.5
       path-posix: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /ember-test-selectors/6.0.0:
+    resolution: {integrity: sha512-PgYcI9PeNvtKaF0QncxfbS68olMYM1idwuI8v/WxsjOGqUx5bmsu6V17vy/d9hX4mwmjgsBhEghrVasGSuaIgw==}
+    engines: {node: 12.* || 14.* || >= 16.*}
+    dependencies:
+      calculate-cache-key-for-tree: 2.0.0
+      ember-cli-babel: 7.26.6
+      ember-cli-version-checker: 5.1.2
     transitivePeerDependencies:
       - supports-color
     dev: true

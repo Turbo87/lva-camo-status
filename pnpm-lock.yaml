@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@babel/eslint-parser': 7.15.8
+  '@babel/plugin-proposal-decorators': 7.15.8
   '@ember/edition-utils': 1.2.0
   '@ember/optional-features': 2.0.0
   '@ember/test-helpers': 2.5.0
@@ -42,6 +43,7 @@ dependencies:
 
 devDependencies:
   '@babel/eslint-parser': 7.15.8_eslint@8.1.0
+  '@babel/plugin-proposal-decorators': 7.15.8
   '@ember/edition-utils': 1.2.0
   '@ember/optional-features': 2.0.0
   '@ember/test-helpers': 2.5.0
@@ -452,6 +454,19 @@ packages:
       - supports-color
     dev: true
 
+  /@babel/plugin-proposal-decorators/7.15.8:
+    resolution: {integrity: sha512-5n8+xGK7YDrXF+WAORg3P7LlCCdiaAyKLZi22eP2BwTy4kJ0kFUMMDCj4nQ8YrKyNZgjhU/9eRVqONnjB3us8g==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/helper-create-class-features-plugin': 7.15.4
+      '@babel/helper-plugin-utils': 7.14.5
+      '@babel/plugin-syntax-decorators': 7.14.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@babel/plugin-proposal-decorators/7.15.8_@babel+core@7.15.8:
     resolution: {integrity: sha512-5n8+xGK7YDrXF+WAORg3P7LlCCdiaAyKLZi22eP2BwTy4kJ0kFUMMDCj4nQ8YrKyNZgjhU/9eRVqONnjB3us8g==}
     engines: {node: '>=6.9.0'}
@@ -633,6 +648,15 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.15.8
+      '@babel/helper-plugin-utils': 7.14.5
+    dev: true
+
+  /@babel/plugin-syntax-decorators/7.14.5:
+    resolution: {integrity: sha512-c4sZMRWL4GSvP1EXy0woIP7m4jkVcEuG8R1TOZxPBPtp4FSM/kiPZub9UIs/Jrb5ZAOzvTUSGYrWsrSu1JvoPw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
       '@babel/helper-plugin-utils': 7.14.5
     dev: true
 

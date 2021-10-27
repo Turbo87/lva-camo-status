@@ -32,7 +32,7 @@
     fill: rgba(0, 0, 0, 0.7);
   }
 
-  &[data-status="ok"] {
+  &[data-status="airworthy"] {
     background: hsla(120, 100%, 35%, 1);
     color: rgba(255, 255, 255,0.7);
     fill: rgba(255, 255, 255,0.7);
@@ -76,7 +76,7 @@
 .icon__thumb-up {
   composes: icon;
 
-  [data-status="ok"] & {
+  [data-status="airworthy"] & {
     opacity: 1;
   }
 }

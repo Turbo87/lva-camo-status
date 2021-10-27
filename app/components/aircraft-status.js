@@ -45,7 +45,7 @@ export default class extends Component {
       : this.isError
       ? 'error'
       : this.isAirworthy === true
-      ? 'ok'
+      ? 'airworthy'
       : this.isAirworthy === false
       ? 'nope'
       : null;

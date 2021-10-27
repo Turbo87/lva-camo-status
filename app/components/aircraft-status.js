@@ -8,9 +8,7 @@ export default class extends Component {
   // id: null,
   // callsign: null,
 
-  // status: null, // set by the fetchTask
-
-  @reads('updateTask.last.value') status;
+  @reads('updateTask.last.value') response;
   @reads('updateTask.isRunning') isLoading;
   @reads('updateTask.last.isError') isError;
 
@@ -19,24 +17,24 @@ export default class extends Component {
       return this.args.type;
     }
 
-    let { status } = this;
-    if (!status) {
+    let { response } = this;
+    if (!response) {
       return null;
-    } else if (status['easa-type'] === status['easa-variant']) {
-      return status['easa-type'];
+    } else if (response['easa-type'] === response['easa-variant']) {
+      return response['easa-type'];
     } else {
-      return `${status['easa-type']} ${status['easa-variant']}`;
+      return `${response['easa-type']} ${response['easa-variant']}`;
     }
   }
 
   get isAirworthy() {
-    let { status } = this;
-    if (!status) {
+    let { response } = this;
+    if (!response) {
       return null;
     } else {
       return (
-        status.camo === 'airworthy' &&
-        (status.ato === 'unknown' || status.ato === 'airworthy')
+        response.camo === 'airworthy' &&
+        (response.ato === 'unknown' || response.ato === 'airworthy')
       );
     }
   }

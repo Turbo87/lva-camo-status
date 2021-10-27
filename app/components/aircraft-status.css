@@ -19,12 +19,33 @@
   cursor: pointer;
 
   transition: background-color .2s, color .2s;
+
+  &.status--loading {
+    background-color: #eee;
+    color: #999;
+    fill: #999;
+  }
+
+  &.status--error {
+    background: hsla(42, 100%, 50%, 1);
+    color: rgba(0, 0, 0, 0.7);
+    fill: rgba(0, 0, 0, 0.7);
+  }
+
+  &.status--ok {
+    background: hsla(120, 100%, 35%, 1);
+    color: rgba(255, 255, 255,0.7);
+    fill: rgba(255, 255, 255,0.7);
+  }
+
+  &.status--nope {
+    background: hsla(0, 100%, 35%, 1);
+    color: rgba(255, 255, 255,0.7);
+    fill: rgba(255, 255, 255,0.7);
+  }
 }
 
-.icon__refresh,
-.icon__error,
-.icon__thumb-up,
-.icon__thumb-down {
+.icon {
   position: absolute;
 
   right: 16px;
@@ -36,42 +57,34 @@
   transition: opacity .2s;
 }
 
-.status--loading {
-  background-color: #eee;
-  color: #999;
-  fill: #999;
+.icon__refresh {
+  composes: icon;
 
-  .icon__refresh {
+  .status--loading & {
     opacity: 1;
   }
 }
 
-.status--error {
-  background: hsla(42, 100%, 50%, 1);
-  color: rgba(0, 0, 0, 0.7);
-  fill: rgba(0, 0, 0, 0.7);
+.icon__error {
+  composes: icon;
 
-  .icon__error {
+  .status--error & {
     opacity: 1;
   }
 }
 
-.status--ok {
-  background: hsla(120, 100%, 35%, 1);
-  color: rgba(255, 255, 255,0.7);
-  fill: rgba(255, 255, 255,0.7);
+.icon__thumb-up {
+  composes: icon;
 
-  .icon__thumb-up {
+  .status--ok & {
     opacity: 1;
   }
 }
 
-.status--nope {
-  background: hsla(0, 100%, 35%, 1);
-  color: rgba(255, 255, 255,0.7);
-  fill: rgba(255, 255, 255,0.7);
+.icon__thumb-down {
+  composes: icon;
 
-  .icon__thumb-down {
+  .status--nope & {
     opacity: 1;
   }
 }
@@ -98,10 +111,7 @@
     margin: 8px 8px 0;
   }
 
-  .icon__refresh,
-  .icon__error,
-  .icon__thumb-up,
-  .icon__thumb-down {
+  .icon {
     right: 22px;
     top: 22px;
   }

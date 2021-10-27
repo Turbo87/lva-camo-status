@@ -1,16 +1,6 @@
-<button
-  type="button"
-  title={{this.updateTask.last.error}}
-  local-class="button"
-  data-status={{this.status}}
-  {{on "click" (perform this.loopTask)}}
->
-
-  <span local-class="callsign" data-test-callsign>{{@callsign}}</span>
-  <span local-class="type" data-test-type>{{this.type}}</span>
-
-  {{svg-jar "thumb-up" width="24" height="24" local-class="icon__thumb-up"}}
-  {{svg-jar "thumb-down" width="24" height="24" local-class="icon__thumb-down"}}
-  {{svg-jar "error" width="24" height="24" local-class="icon__error"}}
-  {{svg-jar "refresh" width="24" height="24" local-class="icon__refresh"}}
-</button>
+<AircraftStatus::Ui
+  @callsign={{@callsign}}
+  @type={{this.type}}
+  @status={{this.status}}
+  @onClick={{perform this.loopTask}}
+/>

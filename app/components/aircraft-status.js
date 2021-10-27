@@ -32,10 +32,7 @@ export default class extends Component {
     if (!response) {
       return null;
     } else {
-      return (
-        response.camo === 'airworthy' &&
-        (response.ato === 'unknown' || response.ato === 'airworthy')
-      );
+      return response.camo === 'airworthy';
     }
   }
 

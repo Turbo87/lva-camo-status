@@ -3,7 +3,7 @@
   title={{this.updateTask.last.error}}
   class="aircraft-status {{this.airworthinessClass}} {{if this.isLoading "aircraft-status--loading"}} {{if this.isError "aircraft-status--error"}}"
   data-test-button
-  {{on "click" (perform loopTask)}}
+  {{on "click" (perform this.loopTask)}}
 >
 
   <span class="aircraft-status__callsign" data-test-callsign>{{@callsign}}</span>

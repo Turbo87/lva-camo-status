@@ -14,7 +14,6 @@ specifiers:
   ember-cli-htmlbars: 6.0.0
   ember-cli-htmlbars-inline-precompile: 3.0.2
   ember-cli-inject-live-reload: 2.1.0
-  ember-cli-pretender: 4.0.0
   ember-cli-qunit: 4.4.0
   ember-cli-sri: 2.1.1
   ember-cli-uglify: 3.0.0
@@ -30,8 +29,12 @@ specifiers:
   eslint-plugin-ember: 10.5.7
   loader.js: 4.7.0
   macro-decorators: 0.1.2
+  pretender: 3.4.7
   qunit-dom: 2.0.0
   webpack: 5.60.0
+
+dependencies:
+  pretender: 3.4.7
 
 devDependencies:
   '@ember/edition-utils': 1.2.0
@@ -47,7 +50,6 @@ devDependencies:
   ember-cli-htmlbars: 6.0.0
   ember-cli-htmlbars-inline-precompile: 3.0.2_ember-cli-babel@7.26.6
   ember-cli-inject-live-reload: 2.1.0
-  ember-cli-pretender: 4.0.0
   ember-cli-qunit: 4.4.0
   ember-cli-sri: 2.1.1
   ember-cli-uglify: 3.0.0
@@ -4506,23 +4508,6 @@ packages:
       process-relative-require: 1.0.0
     dev: true
 
-  /ember-cli-pretender/4.0.0:
-    resolution: {integrity: sha512-jlN532ioI6+DX+9BgxR4iib5EsIhbnxXYX8CwewT27LKYWCMmx4iJc3OzZCt/epTAQ8KlBxgcCP1y5zKReaRcg==}
-    engines: {node: 10.* || >= 12.*}
-    dependencies:
-      abortcontroller-polyfill: 1.7.3
-      broccoli-funnel: 3.0.8
-      broccoli-merge-trees: 4.2.0
-      chalk: 4.1.2
-      ember-cli-babel: 7.26.6
-      fake-xml-http-request: 2.1.2
-      pretender: 3.4.7
-      route-recognizer: 0.3.4
-      whatwg-fetch: 3.6.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /ember-cli-qunit/4.4.0:
     resolution: {integrity: sha512-+gkx380AV4WXYjQeIuQi675STL9K12fHFtxs8B9u3EFbw45vJKrnYR4Vph3FujxhE/1pr/Je8kZEPAuezZAVLw==}
     engines: {node: ^4.5 || 6.* || >= 7.*}
@@ -5461,7 +5446,7 @@ packages:
 
   /fake-xml-http-request/2.1.2:
     resolution: {integrity: sha512-HaFMBi7r+oEC9iJNpc3bvcW7Z7iLmM26hPDmlb0mFwyANSsOQAtJxbdWsXITKOzZUyMYK0zYCv3h5yDj9TsiXg==}
-    dev: true
+    dev: false
 
   /fast-deep-equal/3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -8094,7 +8079,7 @@ packages:
     dependencies:
       fake-xml-http-request: 2.1.2
       route-recognizer: 0.3.4
-    dev: true
+    dev: false
 
   /pretty-ms/3.2.0:
     resolution: {integrity: sha512-ZypexbfVUGTFxb0v+m1bUyy92DHe5SyYlnyY0msyms5zd3RwyvNgyxZZsXXgoyzlxjx5MiqtXUdhUfvQbe0A2Q==}
@@ -8575,7 +8560,7 @@ packages:
 
   /route-recognizer/0.3.4:
     resolution: {integrity: sha512-2+MhsfPhvauN1O8KaXpXAOfR/fwe8dnUXVM+xw7yt40lJRfPVQxV6yryZm0cgRvAj5fMF/mdRZbL2ptwbs5i2g==}
-    dev: true
+    dev: false
 
   /rsvp/3.2.1:
     resolution: {integrity: sha1-B8tKXfJa3Z6Cbrxn3Mn9idsn2Eo=}

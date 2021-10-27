@@ -17,13 +17,13 @@ export default class extends Component {
       return this.args.type;
     }
 
-    let { response } = this;
-    if (!response) {
-      return null;
-    } else if (response['easa-type'] === response['easa-variant']) {
-      return response['easa-type'];
+    let type = this.response?.['easa-type'];
+    let variant = this.response?.['easa-variant'];
+
+    if (type === variant) {
+      return type;
     } else {
-      return `${response['easa-type']} ${response['easa-variant']}`;
+      return `${type} ${variant}`;
     }
   }
 

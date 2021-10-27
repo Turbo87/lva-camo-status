@@ -34,7 +34,7 @@ export default class extends Component {
       ? 'error'
       : this.response?.camo === 'airworthy'
       ? 'airworthy'
-      : this.response
+      : this.response?.camo === 'grounded'
       ? 'grounded'
       : 'unknown';
   }

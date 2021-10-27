@@ -44,7 +44,7 @@ export default class extends Component {
       : this.isAirworthy === true
       ? 'airworthy'
       : this.isAirworthy === false
-      ? 'nope'
+      ? 'grounded'
       : null;
   }
 

@@ -85,7 +85,7 @@ module('Integration | Component | aircraft-status', function (hooks) {
 
     await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
-    assert.dom('button').hasAttribute('data-status', 'nope');
+    assert.dom('button').hasAttribute('data-status', 'grounded');
     assert.dom('[data-test-callsign]').hasText('D-8784');
     assert.dom('[data-test-type]').hasText('ASK 21');
   });

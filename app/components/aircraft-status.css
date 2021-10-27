@@ -38,7 +38,7 @@
     fill: rgba(255, 255, 255,0.7);
   }
 
-  &[data-status="nope"] {
+  &[data-status="grounded"] {
     background: hsla(0, 100%, 35%, 1);
     color: rgba(255, 255, 255,0.7);
     fill: rgba(255, 255, 255,0.7);
@@ -84,7 +84,7 @@
 .icon__thumb-down {
   composes: icon;
 
-  [data-status="nope"] & {
+  [data-status="grounded"] & {
     opacity: 1;
   }
 }

@@ -27,23 +27,14 @@ export default class extends Component {
     }
   }
 
-  get isAirworthy() {
-    let { response } = this;
-    if (!response) {
-      return null;
-    } else {
-      return response.camo === 'airworthy';
-    }
-  }
-
   get status() {
     return this.isLoading
       ? 'loading'
       : this.isError
       ? 'error'
-      : this.isAirworthy === true
+      : this.response?.camo === 'airworthy'
       ? 'airworthy'
-      : this.isAirworthy === false
+      : this.response
       ? 'grounded'
       : 'unknown';
   }

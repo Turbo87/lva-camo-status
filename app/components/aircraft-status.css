@@ -20,25 +20,25 @@
 
   transition: background-color .2s, color .2s;
 
-  &.status--loading {
+  &[data-status="loading"] {
     background-color: #eee;
     color: #999;
     fill: #999;
   }
 
-  &.status--error {
+  &[data-status="error"] {
     background: hsla(42, 100%, 50%, 1);
     color: rgba(0, 0, 0, 0.7);
     fill: rgba(0, 0, 0, 0.7);
   }
 
-  &.status--ok {
+  &[data-status="ok"] {
     background: hsla(120, 100%, 35%, 1);
     color: rgba(255, 255, 255,0.7);
     fill: rgba(255, 255, 255,0.7);
   }
 
-  &.status--nope {
+  &[data-status="nope"] {
     background: hsla(0, 100%, 35%, 1);
     color: rgba(255, 255, 255,0.7);
     fill: rgba(255, 255, 255,0.7);
@@ -60,7 +60,7 @@
 .icon__refresh {
   composes: icon;
 
-  .status--loading & {
+  [data-status="loading"] & {
     opacity: 1;
   }
 }
@@ -68,7 +68,7 @@
 .icon__error {
   composes: icon;
 
-  .status--error & {
+  [data-status="error"] & {
     opacity: 1;
   }
 }
@@ -76,7 +76,7 @@
 .icon__thumb-up {
   composes: icon;
 
-  .status--ok & {
+  [data-status="ok"] & {
     opacity: 1;
   }
 }
@@ -84,7 +84,7 @@
 .icon__thumb-down {
   composes: icon;
 
-  .status--nope & {
+  [data-status="nope"] & {
     opacity: 1;
   }
 }

@@ -1,7 +1,8 @@
 <button
   type="button"
   title={{this.updateTask.last.error}}
-  local-class="button {{this.airworthinessClass}} {{if this.isLoading "status--loading"}} {{if this.isError "status--error"}}"
+  local-class="button"
+  data-status={{this.status}}
   data-test-button
   {{on "click" (perform this.loopTask)}}
 >

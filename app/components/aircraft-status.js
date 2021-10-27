@@ -39,12 +39,15 @@ export default class extends Component {
     }
   }
 
-  get airworthinessClass() {
-    let airworthy = this.isAirworthy;
-    return airworthy === true
-      ? 'status--ok'
-      : airworthy === false
-      ? 'status--nope'
+  get status() {
+    return this.isLoading
+      ? 'loading'
+      : this.isError
+      ? 'error'
+      : this.isAirworthy === true
+      ? 'ok'
+      : this.isAirworthy === false
+      ? 'nope'
       : null;
   }
 

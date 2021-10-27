@@ -46,7 +46,12 @@ export default class extends Component {
 
   @restartableTask *loopTask() {
     while (true) {
-      yield this.updateTask.perform();
+      try {
+        yield this.updateTask.perform();
+      } catch {
+        // ignore all errors since they are handled within the template
+      }
+
       yield rawTimeout(60000);
     }
   }

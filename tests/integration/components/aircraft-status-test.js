@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render, waitFor } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import Pretender from 'pretender';
-import RSVP from 'rsvp';
+import defer from 'p-defer';
 
 const AIRWORTHY_RESPONSE = {
   'data': {
@@ -93,7 +93,7 @@ module('Integration | Component | aircraft-status', function(hooks) {
   });
 
   test('shows loading indicator while loading', async function(assert) {
-    let deferred = RSVP.defer();
+    let deferred = defer();
 
     this.server.get('https://api.camo-europe.aero/statuses/WTsHJRdZ', function() {
       return deferred.promise.then(() => [200, {"Content-Type": "application/json"}, JSON.stringify(AIRWORTHY_RESPONSE)]);

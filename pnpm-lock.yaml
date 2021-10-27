@@ -29,11 +29,13 @@ specifiers:
   eslint-plugin-ember: 10.5.7
   loader.js: 4.7.0
   macro-decorators: 0.1.2
+  p-defer: 4.0.0
   pretender: 3.4.7
   qunit-dom: 2.0.0
   webpack: 5.60.0
 
 dependencies:
+  p-defer: 4.0.0
   pretender: 3.4.7
 
 devDependencies:
@@ -7792,6 +7794,11 @@ packages:
     resolution: {integrity: sha512-ugZxsxmtTln604yeYd29EGrNhazN2lywetzpKhfmQjW/VJmhpDmWbiX+h0zL8V91R0UXkhb3KtPmyq9PZw3aYw==}
     engines: {node: '>=8'}
     dev: true
+
+  /p-defer/4.0.0:
+    resolution: {integrity: sha512-Vb3QRvQ0Y5XnF40ZUWW7JfLogicVh/EnA5gBIvKDJoYpeI82+1E3AlB9yOcKFS0AhHrWVnAQO39fbR0G99IVEQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /p-finally/1.0.0:
     resolution: {integrity: sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=}

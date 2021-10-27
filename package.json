@@ -17,6 +17,7 @@
     "test": "ember test"
   },
   "dependencies": {
+    "p-defer": "4.0.0",
     "pretender": "3.4.7"
   },
   "devDependencies": {

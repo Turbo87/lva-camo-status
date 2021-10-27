@@ -65,11 +65,7 @@ module('Integration | Component | aircraft-status', function (hooks) {
     this.server.get(
       'https://api.camo-europe.aero/statuses/WTsHJRdZ',
       function () {
-        return [
-          200,
-          { 'Content-Type': 'application/json' },
-          JSON.stringify(AIRWORTHY_RESPONSE),
-        ];
+        return [200, {}, JSON.stringify(AIRWORTHY_RESPONSE)];
       }
     );
 
@@ -84,11 +80,7 @@ module('Integration | Component | aircraft-status', function (hooks) {
     this.server.get(
       'https://api.camo-europe.aero/statuses/WTsHJRdZ',
       function () {
-        return [
-          200,
-          { 'Content-Type': 'application/json' },
-          JSON.stringify(GROUNDED_RESPONSE),
-        ];
+        return [200, {}, JSON.stringify(GROUNDED_RESPONSE)];
       }
     );
 
@@ -103,11 +95,7 @@ module('Integration | Component | aircraft-status', function (hooks) {
     this.server.get(
       'https://api.camo-europe.aero/statuses/WTsHJRdZ',
       function () {
-        return [
-          200,
-          { 'Content-Type': 'application/json' },
-          JSON.stringify(AIRWORTHY_RESPONSE),
-        ];
+        return [200, {}, JSON.stringify(AIRWORTHY_RESPONSE)];
       }
     );
 
@@ -128,7 +116,7 @@ module('Integration | Component | aircraft-status', function (hooks) {
       function () {
         return deferred.promise.then(() => [
           200,
-          { 'Content-Type': 'application/json' },
+          {},
           JSON.stringify(AIRWORTHY_RESPONSE),
         ]);
       }

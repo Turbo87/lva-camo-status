@@ -1,16 +1,16 @@
 <button
   type="button"
   title={{this.updateTask.last.error}}
-  class="aircraft-status {{this.airworthinessClass}} {{if this.isLoading "aircraft-status--loading"}} {{if this.isError "aircraft-status--error"}}"
+  local-class="button {{this.airworthinessClass}} {{if this.isLoading "status--loading"}} {{if this.isError "status--error"}}"
   data-test-button
   {{on "click" (perform this.loopTask)}}
 >
 
-  <span class="aircraft-status__callsign" data-test-callsign>{{@callsign}}</span>
-  <span class="aircraft-status__type" data-test-type>{{this.type}}</span>
+  <span local-class="callsign" data-test-callsign>{{@callsign}}</span>
+  <span local-class="type" data-test-type>{{this.type}}</span>
 
-  {{svg-jar "thumb-up" width="24" height="24" class="aircraft-status__thumb-up"}}
-  {{svg-jar "thumb-down" width="24" height="24" class="aircraft-status__thumb-down"}}
-  {{svg-jar "error" width="24" height="24" class="aircraft-status__error"}}
-  {{svg-jar "refresh" width="24" height="24" class="aircraft-status__refresh"}}
+  {{svg-jar "thumb-up" width="24" height="24" local-class="icon__thumb-up"}}
+  {{svg-jar "thumb-down" width="24" height="24" local-class="icon__thumb-down"}}
+  {{svg-jar "error" width="24" height="24" local-class="icon__error"}}
+  {{svg-jar "refresh" width="24" height="24" local-class="icon__refresh"}}
 </button>

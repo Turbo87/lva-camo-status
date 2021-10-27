@@ -44,9 +44,9 @@ export default class extends Component {
   get airworthinessClass() {
     let airworthy = this.isAirworthy;
     return airworthy === true
-      ? 'aircraft-status--ok'
+      ? 'status--ok'
       : airworthy === false
-      ? 'aircraft-status--nope'
+      ? 'status--nope'
       : null;
   }
 

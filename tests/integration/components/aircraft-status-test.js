@@ -4,6 +4,7 @@ import { render, waitFor } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import Pretender from 'pretender';
 import defer from 'p-defer';
+import styles from '../../../components/aircraft-status.css';
 
 const AIRWORTHY_RESPONSE = {
   data: {
@@ -74,7 +75,7 @@ module('Integration | Component | aircraft-status', function (hooks) {
 
     await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
-    assert.dom('[data-test-button]').hasClass('aircraft-status--ok');
+    assert.dom('[data-test-button]').hasClass(styles['status--ok']);
     assert.dom('[data-test-callsign]').hasText('D-8784');
     assert.dom('[data-test-type]').hasText('ASK 21');
   });
@@ -93,7 +94,7 @@ module('Integration | Component | aircraft-status', function (hooks) {
 
     await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
-    assert.dom('[data-test-button]').hasClass('aircraft-status--nope');
+    assert.dom('[data-test-button]').hasClass(styles['status--nope']);
     assert.dom('[data-test-callsign]').hasText('D-8784');
     assert.dom('[data-test-type]').hasText('ASK 21');
   });
@@ -114,7 +115,7 @@ module('Integration | Component | aircraft-status', function (hooks) {
       hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784" @type="AlphaJet"/>`
     );
 
-    assert.dom('[data-test-button]').hasClass('aircraft-status--ok');
+    assert.dom('[data-test-button]').hasClass(styles['status--ok']);
     assert.dom('[data-test-callsign]').hasText('D-8784');
     assert.dom('[data-test-type]').hasText('AlphaJet');
   });
@@ -136,7 +137,7 @@ module('Integration | Component | aircraft-status', function (hooks) {
     render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
     await waitFor('[data-test-button]');
-    assert.dom('[data-test-button]').hasClass('aircraft-status--loading');
+    assert.dom('[data-test-button]').hasClass(styles['status--loading']);
 
     deferred.resolve();
   });

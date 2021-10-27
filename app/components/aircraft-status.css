@@ -1,14 +1,4 @@
-body {
-  background-color: white;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.title {
-  margin: 24px 32px;
-  font-size: 24px;
-}
-
-.aircraft-status {
+.button {
   position: relative;
 
   display: block;
@@ -31,10 +21,10 @@ body {
   transition: background-color .2s, color .2s;
 }
 
-.aircraft-status__refresh,
-.aircraft-status__error,
-.aircraft-status__thumb-up,
-.aircraft-status__thumb-down {
+.icon__refresh,
+.icon__error,
+.icon__thumb-up,
+.icon__thumb-down {
   position: absolute;
 
   right: 16px;
@@ -46,72 +36,72 @@ body {
   transition: opacity .2s;
 }
 
-.aircraft-status--loading {
+.status--loading {
   background-color: #eee;
   color: #999;
   fill: #999;
 }
 
-.aircraft-status--loading .aircraft-status__refresh {
+.status--loading .icon__refresh {
   opacity: 1;
 }
 
-.aircraft-status--error {
+.status--error {
   background: hsla(42, 100%, 50%, 1);
   color: rgba(0, 0, 0, 0.7);
   fill: rgba(0, 0, 0, 0.7);
 }
 
-.aircraft-status--error .aircraft-status__error {
+.status--error .icon__error {
   opacity: 1;
 }
 
-.aircraft-status--ok {
+.status--ok {
   background: hsla(120, 100%, 35%, 1);
   color: rgba(255, 255, 255,0.7);
   fill: rgba(255, 255, 255,0.7);
 }
 
-.aircraft-status--ok .aircraft-status__thumb-up {
+.status--ok .icon__thumb-up {
   opacity: 1;
 }
 
-.aircraft-status--nope {
+.status--nope {
   background: hsla(0, 100%, 35%, 1);
   color: rgba(255, 255, 255,0.7);
   fill: rgba(255, 255, 255,0.7);
 }
 
-.aircraft-status--nope .aircraft-status__thumb-down {
+.status--nope .icon__thumb-down {
   opacity: 1;
 }
 
-.aircraft-status__callsign {
+.callsign {
   font-size: 40px;
   line-height: 52px;
   margin: 0 8px;
 }
 
-.aircraft-status__type {
+.type {
   font-size: 16px;
   line-height: 16px;
 }
 
 @media screen and (max-width:400px) {
-  .aircraft-status__callsign {
+  .callsign {
     font-size: 40px;
     line-height: 40px;
   }
 
-  .aircraft-status__type {
+  .type {
     display: block;
     margin: 8px 8px 0;
   }
 
-  .aircraft-status__refresh,
-  .aircraft-status__error,
-  .aircraft-status__thumb-up,
-  .aircraft-status__thumb-down {
+  .icon__refresh,
+  .icon__error,
+  .icon__thumb-up,
+  .icon__thumb-down {
     right: 22px;
     top: 22px;
   }

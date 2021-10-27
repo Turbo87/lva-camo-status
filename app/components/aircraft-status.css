@@ -40,40 +40,40 @@
   background-color: #eee;
   color: #999;
   fill: #999;
-}
 
-.status--loading .icon__refresh {
-  opacity: 1;
+  .icon__refresh {
+    opacity: 1;
+  }
 }
 
 .status--error {
   background: hsla(42, 100%, 50%, 1);
   color: rgba(0, 0, 0, 0.7);
   fill: rgba(0, 0, 0, 0.7);
-}
 
-.status--error .icon__error {
-  opacity: 1;
+  .icon__error {
+    opacity: 1;
+  }
 }
 
 .status--ok {
   background: hsla(120, 100%, 35%, 1);
   color: rgba(255, 255, 255,0.7);
   fill: rgba(255, 255, 255,0.7);
-}
 
-.status--ok .icon__thumb-up {
-  opacity: 1;
+  .icon__thumb-up {
+    opacity: 1;
+  }
 }
 
 .status--nope {
   background: hsla(0, 100%, 35%, 1);
   color: rgba(255, 255, 255,0.7);
   fill: rgba(255, 255, 255,0.7);
-}
 
-.status--nope .icon__thumb-down {
-  opacity: 1;
+  .icon__thumb-down {
+    opacity: 1;
+  }
 }
 
 .callsign {

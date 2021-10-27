@@ -4,7 +4,6 @@ import { render, waitFor } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import Pretender from 'pretender';
 import defer from 'p-defer';
-import styles from '../../../components/aircraft-status.css';
 
 const AIRWORTHY_RESPONSE = {
   data: {

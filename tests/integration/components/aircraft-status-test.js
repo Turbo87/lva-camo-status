@@ -113,13 +113,7 @@ module('Integration | Component | aircraft-status', function (hooks) {
 
     this.server.get(
       'https://api.camo-europe.aero/statuses/WTsHJRdZ',
-      function () {
-        return deferred.promise.then(() => [
-          200,
-          {},
-          JSON.stringify(AIRWORTHY_RESPONSE),
-        ]);
-      }
+      () => deferred.promise
     );
 
     render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
@@ -127,6 +121,6 @@ module('Integration | Component | aircraft-status', function (hooks) {
     await waitFor('button');
     assert.dom('button').hasAttribute('data-status', 'loading');
 
-    deferred.resolve();
+    deferred.resolve([200, {}, JSON.stringify(AIRWORTHY_RESPONSE)]);
   });
 });

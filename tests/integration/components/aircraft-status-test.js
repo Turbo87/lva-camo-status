@@ -6,60 +6,71 @@ import Pretender from 'pretender';
 import defer from 'p-defer';
 
 const AIRWORTHY_RESPONSE = {
-  'data': {
-    'id': 'WTsHJRdZ',
-    'type': 'status',
-    'attributes': {
-      'timestamp': '2018-05-30T08:13:21+00:00',
-      'camo': 'airworthy',
-      'ato': 'unknown',
+  data: {
+    id: 'WTsHJRdZ',
+    type: 'status',
+    attributes: {
+      timestamp: '2018-05-30T08:13:21+00:00',
+      camo: 'airworthy',
+      ato: 'unknown',
       'easa-type': 'ASK 21',
-      'easa-variant': 'ASK 21'
+      'easa-variant': 'ASK 21',
     },
-    'relationships': {'aircraft': {'data': {'id': 'WTsHJRdZ', 'type': 'aircraft'}}},
-    'included': [{
-      'id': 'WTsHJRdZ',
-      'type': 'aircraft',
-      'attributes': {'easa-type': 'ASK 21', 'easa-variant': 'ASK 21'}
-    }]
-  }
+    relationships: { aircraft: { data: { id: 'WTsHJRdZ', type: 'aircraft' } } },
+    included: [
+      {
+        id: 'WTsHJRdZ',
+        type: 'aircraft',
+        attributes: { 'easa-type': 'ASK 21', 'easa-variant': 'ASK 21' },
+      },
+    ],
+  },
 };
 
 let GROUNDED_RESPONSE = {
-  'data': {
-    'id': 'WTsHJRdZ',
-    'type': 'status',
-    'attributes': {
-      'timestamp': '2018-05-30T08:13:21+00:00',
-      'camo': 'grounded',
-      'ato': 'unknown',
+  data: {
+    id: 'WTsHJRdZ',
+    type: 'status',
+    attributes: {
+      timestamp: '2018-05-30T08:13:21+00:00',
+      camo: 'grounded',
+      ato: 'unknown',
       'easa-type': 'ASK 21',
-      'easa-variant': 'ASK 21'
+      'easa-variant': 'ASK 21',
     },
-    'relationships': {'aircraft': {'data': {'id': 'WTsHJRdZ', 'type': 'aircraft'}}},
-    'included': [{
-      'id': 'WTsHJRdZ',
-      'type': 'aircraft',
-      'attributes': {'easa-type': 'ASK 21', 'easa-variant': 'ASK 21'}
-    }]
-  }
+    relationships: { aircraft: { data: { id: 'WTsHJRdZ', type: 'aircraft' } } },
+    included: [
+      {
+        id: 'WTsHJRdZ',
+        type: 'aircraft',
+        attributes: { 'easa-type': 'ASK 21', 'easa-variant': 'ASK 21' },
+      },
+    ],
+  },
 };
 
-module('Integration | Component | aircraft-status', function(hooks) {
+module('Integration | Component | aircraft-status', function (hooks) {
   setupRenderingTest(hooks);
 
-  hooks.beforeEach(function() {
+  hooks.beforeEach(function () {
     this.server = new Pretender();
   });
 
-  hooks.afterEach(function() {
+  hooks.afterEach(function () {
     this.server.shutdown();
   });
 
-  test('it renders airworthy correctly', async function(assert) {
-    this.server.get('https://api.camo-europe.aero/statuses/WTsHJRdZ', function() {
-      return [200, {"Content-Type": "application/json"}, JSON.stringify(AIRWORTHY_RESPONSE)];
-    });
+  test('it renders airworthy correctly', async function (assert) {
+    this.server.get(
+      'https://api.camo-europe.aero/statuses/WTsHJRdZ',
+      function () {
+        return [
+          200,
+          { 'Content-Type': 'application/json' },
+          JSON.stringify(AIRWORTHY_RESPONSE),
+        ];
+      }
+    );
 
     await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
@@ -68,10 +79,17 @@ module('Integration | Component | aircraft-status', function(hooks) {
     assert.dom('[data-test-type]').hasText('ASK 21');
   });
 
-  test('it renders grounded correctly', async function(assert) {
-    this.server.get('https://api.camo-europe.aero/statuses/WTsHJRdZ', function() {
-      return [200, {"Content-Type": "application/json"}, JSON.stringify(GROUNDED_RESPONSE)];
-    });
+  test('it renders grounded correctly', async function (assert) {
+    this.server.get(
+      'https://api.camo-europe.aero/statuses/WTsHJRdZ',
+      function () {
+        return [
+          200,
+          { 'Content-Type': 'application/json' },
+          JSON.stringify(GROUNDED_RESPONSE),
+        ];
+      }
+    );
 
     await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 
@@ -80,24 +98,40 @@ module('Integration | Component | aircraft-status', function(hooks) {
     assert.dom('[data-test-type]').hasText('ASK 21');
   });
 
-  test('can override aircraft type', async function(assert) {
-    this.server.get('https://api.camo-europe.aero/statuses/WTsHJRdZ', function() {
-      return [200, {"Content-Type": "application/json"}, JSON.stringify(AIRWORTHY_RESPONSE)];
-    });
+  test('can override aircraft type', async function (assert) {
+    this.server.get(
+      'https://api.camo-europe.aero/statuses/WTsHJRdZ',
+      function () {
+        return [
+          200,
+          { 'Content-Type': 'application/json' },
+          JSON.stringify(AIRWORTHY_RESPONSE),
+        ];
+      }
+    );
 
-    await render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784" @type="AlphaJet"/>`);
+    await render(
+      hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784" @type="AlphaJet"/>`
+    );
 
     assert.dom('[data-test-button]').hasClass('aircraft-status--ok');
     assert.dom('[data-test-callsign]').hasText('D-8784');
     assert.dom('[data-test-type]').hasText('AlphaJet');
   });
 
-  test('shows loading indicator while loading', async function(assert) {
+  test('shows loading indicator while loading', async function (assert) {
     let deferred = defer();
 
-    this.server.get('https://api.camo-europe.aero/statuses/WTsHJRdZ', function() {
-      return deferred.promise.then(() => [200, {"Content-Type": "application/json"}, JSON.stringify(AIRWORTHY_RESPONSE)]);
-    });
+    this.server.get(
+      'https://api.camo-europe.aero/statuses/WTsHJRdZ',
+      function () {
+        return deferred.promise.then(() => [
+          200,
+          { 'Content-Type': 'application/json' },
+          JSON.stringify(AIRWORTHY_RESPONSE),
+        ]);
+      }
+    );
 
     render(hbs`<AircraftStatus @id="WTsHJRdZ" @callsign="D-8784"/>`);
 

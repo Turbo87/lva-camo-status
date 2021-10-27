@@ -6,21 +6,17 @@ module.exports = {
     sourceType: 'module',
     requireConfigFile: false,
     babelOptions: {
-      plugins: [['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }]],
+      plugins: [
+        ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
+      ],
     },
   },
-  plugins: [
-    'ember'
-  ],
-  extends: [
-    'eslint:recommended',
-    'plugin:ember/recommended'
-  ],
+  plugins: ['ember'],
+  extends: ['eslint:recommended', 'plugin:ember/recommended'],
   env: {
-    browser: true
+    browser: true,
   },
-  rules: {
-  },
+  rules: {},
   overrides: [
     // node files
     {
@@ -34,12 +30,12 @@ module.exports = {
       ],
       parserOptions: {
         sourceType: 'script',
-        ecmaVersion: 2015
+        ecmaVersion: 2015,
       },
       env: {
         browser: false,
-        node: true
-      }
-    }
-  ]
+        node: true,
+      },
+    },
+  ],
 };

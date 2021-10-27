@@ -34,7 +34,10 @@ export default class extends Component {
     if (!status) {
       return null;
     } else {
-      return status.camo === 'airworthy' && (status.ato === 'unknown' || status.ato === 'airworthy');
+      return (
+        status.camo === 'airworthy' &&
+        (status.ato === 'unknown' || status.ato === 'airworthy')
+      );
     }
   }
 
@@ -43,8 +46,8 @@ export default class extends Component {
     return airworthy === true
       ? 'aircraft-status--ok'
       : airworthy === false
-        ? 'aircraft-status--nope'
-        : null;
+      ? 'aircraft-status--nope'
+      : null;
   }
 
   constructor() {
@@ -60,7 +63,9 @@ export default class extends Component {
   }
 
   @dropTask *updateTask() {
-    let response = yield fetch(`https://api.camo-europe.aero/statuses/${this.args.id}`);
+    let response = yield fetch(
+      `https://api.camo-europe.aero/statuses/${this.args.id}`
+    );
     if (!response.ok) {
       throw new Error('API request failed');
     }

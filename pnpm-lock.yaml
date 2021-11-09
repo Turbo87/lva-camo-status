@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@babel/eslint-parser': 7.16.0
+  '@babel/eslint-parser': 7.16.3
   '@babel/plugin-proposal-decorators': 7.16.0
   '@ember/optional-features': 2.0.0
   '@ember/test-helpers': 2.6.0
@@ -49,7 +49,7 @@ dependencies:
   pretender: 3.4.7
 
 devDependencies:
-  '@babel/eslint-parser': 7.16.0_eslint@8.2.0
+  '@babel/eslint-parser': 7.16.3_eslint@8.2.0
   '@babel/plugin-proposal-decorators': 7.16.0
   '@ember/optional-features': 2.0.0
   '@ember/test-helpers': 2.6.0
@@ -127,8 +127,8 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/eslint-parser/7.16.0_eslint@8.2.0:
-    resolution: {integrity: sha512-c+AsYOHjI+FgCa+ifLd8sDXp4U4mjkfFgL9NdQWhuA731kAUJs0WdJIXET4A14EJAR9Jv9FFF/MzPWJfV9Oirw==}
+  /@babel/eslint-parser/7.16.3_eslint@8.2.0:
+    resolution: {integrity: sha512-iB4ElZT0jAt7PKVaeVulOECdGe6UnmA/O0P9jlF5g5GBOwDVbna8AXhHRu4s27xQf6OkveyA8iTDv1jHdDejgQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
       '@babel/core': '>=7.11.0'

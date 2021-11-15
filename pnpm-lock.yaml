@@ -7,7 +7,7 @@ specifiers:
   '@ember/test-helpers': 2.6.0
   '@glimmer/component': 1.0.4
   broccoli-asset-rev: 3.0.0
-  ember-auto-import: 2.2.3
+  ember-auto-import: 2.2.4
   ember-cli: 3.28.4
   ember-cli-app-version: 5.0.0
   ember-cli-babel: 7.26.6
@@ -55,7 +55,7 @@ devDependencies:
   '@ember/test-helpers': 2.6.0
   '@glimmer/component': 1.0.4
   broccoli-asset-rev: 3.0.0
-  ember-auto-import: 2.2.3_webpack@5.64.0
+  ember-auto-import: 2.2.4_webpack@5.64.0
   ember-cli: 3.28.4
   ember-cli-app-version: 5.0.0
   ember-cli-babel: 7.26.6
@@ -4782,8 +4782,8 @@ packages:
       - webpack-command
     dev: true
 
-  /ember-auto-import/2.2.3_webpack@5.64.0:
-    resolution: {integrity: sha512-ISb8HcfLj7f/S3exLNSpmsTXFtu/8X7AVvikYU8/9/5NEobgEaH831jc8fqgQQLNCk8Aiz14u8Xi8SSaBMI88Q==}
+  /ember-auto-import/2.2.4_webpack@5.64.0:
+    resolution: {integrity: sha512-iXHH+bSMP/uWvJmIhjt+PZz4ymqOLccIxZUouVcUFLKA5EAWE7gamlA684m0pIbSE/V9zKpOul4OfIgKXFprBg==}
     engines: {node: 12 || >= 14}
     dependencies:
       '@babel/core': 7.16.0
@@ -9548,7 +9548,7 @@ packages:
   /regenerator-transform/0.14.5:
     resolution: {integrity: sha512-eOf6vka5IO151Jfsw2NO9WpGX58W6wWmefK3I1zEGr0lOD0u8rwPaNqQL1aRxUaxLeKO3ArNh3VYg1KbaD+FFw==}
     dependencies:
-      '@babel/runtime': 7.12.18
+      '@babel/runtime': 7.16.0
     dev: true
 
   /regex-not/1.0.2:

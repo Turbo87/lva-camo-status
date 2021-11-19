@@ -17,7 +17,7 @@ specifiers:
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
   ember-concurrency: 2.2.0
-  ember-css-modules: 1.5.0
+  ember-css-modules: 1.6.0
   ember-export-application-global: 2.0.1
   ember-fetch: 8.1.1
   ember-load-initializers: 2.1.2
@@ -65,7 +65,7 @@ devDependencies:
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
   ember-concurrency: 2.2.0
-  ember-css-modules: 1.5.0
+  ember-css-modules: 1.6.0
   ember-export-application-global: 2.0.1
   ember-fetch: 8.1.1
   ember-load-initializers: 2.1.2
@@ -5232,8 +5232,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-css-modules/1.5.0:
-    resolution: {integrity: sha512-O2d3o1oZw3LZE8K123W9in764bg4VcBj4UxspIWpsz6dAIYbpAQOb8zo/wuMIwaocd8mgjfFkS4nHpxIEvcjVw==}
+  /ember-css-modules/1.6.0:
+    resolution: {integrity: sha512-koUJn2CqFOXcsFOsRQefULLTF7s8PKc/roG9VKDVcTe5OCtBPzqmepYqWsTmWkIbx7VZpXtHsQAx9hxpG5cFMg==}
     engines: {node: 6.* || 8.* || >= 10.*}
     dependencies:
       broccoli-bridge: 1.0.0

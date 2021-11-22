@@ -17,7 +17,7 @@ specifiers:
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
   ember-concurrency: 2.2.0
-  ember-css-modules: 1.6.0
+  ember-css-modules: 2.0.0
   ember-export-application-global: 2.0.1
   ember-fetch: 8.1.1
   ember-load-initializers: 2.1.2
@@ -65,7 +65,7 @@ devDependencies:
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
   ember-concurrency: 2.2.0
-  ember-css-modules: 1.6.0
+  ember-css-modules: 2.0.0
   ember-export-application-global: 2.0.1
   ember-fetch: 8.1.1
   ember-load-initializers: 2.1.2
@@ -3257,13 +3257,6 @@ packages:
       mkdirp: 0.5.5
     dev: true
 
-  /broccoli-merge-trees/2.0.1:
-    resolution: {integrity: sha512-WjaexJ+I8BxP5V5RNn6um/qDRSmKoiBC/QkRi79FT9ClHfldxRyCDs9mcV7mmoaPlsshmmPaUz5jdtcKA6DClQ==}
-    dependencies:
-      broccoli-plugin: 1.3.1
-      merge-trees: 1.0.1
-    dev: true
-
   /broccoli-merge-trees/3.0.2:
     resolution: {integrity: sha512-ZyPAwrOdlCddduFbsMyyFzJUrvW6b04pMvDiAQZrCwghlvgowJDY+EfoXn+eR1RRA5nmGHJ+B68T63VnpRiT1A==}
     engines: {node: '>=6.0.0'}
@@ -3749,12 +3742,6 @@ packages:
       to-object-path: 0.3.0
       union-value: 1.0.1
       unset-value: 1.0.0
-    dev: true
-
-  /calculate-cache-key-for-tree/1.2.3:
-    resolution: {integrity: sha512-PPQorvdNw8K8k7UftCeradwOmKDSDJs8wcqYTtJPEt3fHbZyK8QsorybJA+lOmk0dgE61vX6R+5Kd3W9h4EMGg==}
-    dependencies:
-      json-stable-stringify: 1.0.1
     dev: true
 
   /calculate-cache-key-for-tree/2.0.0:
@@ -4897,16 +4884,6 @@ packages:
     resolution: {integrity: sha1-DXtZVVni+QUKvtgE8djv8bCLx3E=}
     dev: true
 
-  /ember-cli-htmlbars/3.1.0:
-    resolution: {integrity: sha512-cgvRJM73IT0aePUG7oQ/afB7vSRBV3N0wu9BrWhHX2zkR7A7cUBI7KC9VPk6tbctCXoM7BRGsCC4aIjF7yrfXA==}
-    engines: {node: 6.* || 8.* || >= 10.*}
-    dependencies:
-      broccoli-persistent-filter: 2.3.1
-      hash-for-dep: 1.5.1
-      json-stable-stringify: 1.0.1
-      strip-bom: 3.0.0
-    dev: true
-
   /ember-cli-htmlbars/5.7.1:
     resolution: {integrity: sha512-9laCgL4tSy48orNoQgQKEHp93MaqAs9ZOl7or5q+8iyGGJHW6sVXIYrVv5/5O9HfV6Ts8/pW1rSoaeKyLUE+oA==}
     engines: {node: 10.* || >= 12.*}
@@ -5079,14 +5056,6 @@ packages:
       - supports-color
     dev: true
 
-  /ember-cli-version-checker/2.2.0:
-    resolution: {integrity: sha512-G+KtYIVlSOWGcNaTFHk76xR4GdzDLzAS4uxZUKdASuFX0KJE43C6DaqL+y3VTpUFLI2FIkAS6HZ4I1YBi+S3hg==}
-    engines: {node: '>= 4'}
-    dependencies:
-      resolve: 1.20.0
-      semver: 5.7.1
-    dev: true
-
   /ember-cli-version-checker/3.1.3:
     resolution: {integrity: sha512-PZNSvpzwWgv68hcXxyjREpj3WWb81A7rtYNQq1lLEgrWIchF8ApKJjWP3NBpHjaatwILkZAV8klair5WFlXAKg==}
     engines: {node: 6.* || 8.* || >= 10.*}
@@ -5242,27 +5211,24 @@ packages:
       - supports-color
     dev: true
 
-  /ember-css-modules/1.6.0:
-    resolution: {integrity: sha512-koUJn2CqFOXcsFOsRQefULLTF7s8PKc/roG9VKDVcTe5OCtBPzqmepYqWsTmWkIbx7VZpXtHsQAx9hxpG5cFMg==}
-    engines: {node: 6.* || 8.* || >= 10.*}
+  /ember-css-modules/2.0.0:
+    resolution: {integrity: sha512-vDMnMCN0GHREuuDXKiu7MsJVWNlCyJN02mrrDJN4QAm4jVVg3R5WWb0dHFtxpk2DZiMSxqkoSxSwu85ZUggW/A==}
+    engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       broccoli-bridge: 1.0.0
-      broccoli-concat: 3.7.5
+      broccoli-concat: 4.2.5
       broccoli-css-modules: 0.8.0_postcss@8.3.11
-      broccoli-funnel: 2.0.2
-      broccoli-merge-trees: 2.0.1
+      broccoli-funnel: 3.0.8
+      broccoli-merge-trees: 4.2.0
       broccoli-postcss: 6.0.0
-      calculate-cache-key-for-tree: 1.2.3
-      debug: 3.2.7
+      debug: 4.3.2
       ember-cli-babel: 7.26.6
-      ember-cli-htmlbars: 3.1.0
-      ember-cli-version-checker: 2.2.0
+      ember-cli-htmlbars: 6.0.0
       ensure-posix-path: 1.1.1
       hash-string: 1.0.0
       lodash.merge: 4.6.2
       postcss: 8.3.11
-      semver: 5.7.1
-      toposort: 1.0.7
+      toposort: 2.0.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8294,17 +8260,6 @@ packages:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
     dev: true
 
-  /merge-trees/1.0.1:
-    resolution: {integrity: sha1-zL5nRWl4f53vF/1G5lJfVwC70j4=}
-    dependencies:
-      can-symlink: 1.0.0
-      fs-tree-diff: 0.5.9
-      heimdalljs: 0.2.6
-      heimdalljs-logger: 0.1.10
-      rimraf: 2.7.1
-      symlink-or-copy: 1.3.1
-    dev: true
-
   /merge-trees/2.0.0:
     resolution: {integrity: sha512-5xBbmqYBalWqmhYm51XlohhkmVOua3VAUrrWh8t9iOkaLpS6ifqm/UVuUjQCeDVJ9Vx3g2l6ihfkbLSTeKsHbw==}
     dependencies:
@@ -10831,8 +10786,8 @@ packages:
     engines: {node: '>=0.6'}
     dev: true
 
-  /toposort/1.0.7:
-    resolution: {integrity: sha1-LmhELZ9k7HILjMieZEOsbKqVACk=}
+  /toposort/2.0.2:
+    resolution: {integrity: sha1-riF2gXXRVZ1IvvNUILL0li8JwzA=}
     dev: true
 
   /tough-cookie/4.0.0:

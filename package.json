@@ -58,7 +58,7 @@
     "loader.js": "4.7.0",
     "macro-decorators": "0.1.2",
     "postcss-nested": "5.0.6",
-    "prettier": "2.5.0",
+    "prettier": "2.5.1",
     "qunit": "2.17.2",
     "qunit-dom": "2.0.0",
     "webpack": "5.64.4"

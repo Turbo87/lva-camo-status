@@ -12,7 +12,7 @@ specifiers:
   ember-cli-app-version: 5.0.0
   ember-cli-babel: 7.26.6
   ember-cli-dependency-checker: 3.2.0
-  ember-cli-htmlbars: 6.0.0
+  ember-cli-htmlbars: 6.0.1
   ember-cli-inject-live-reload: 2.1.0
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
@@ -60,7 +60,7 @@ devDependencies:
   ember-cli-app-version: 5.0.0
   ember-cli-babel: 7.26.6
   ember-cli-dependency-checker: 3.2.0
-  ember-cli-htmlbars: 6.0.0
+  ember-cli-htmlbars: 6.0.1
   ember-cli-inject-live-reload: 2.1.0
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
@@ -4907,8 +4907,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-cli-htmlbars/6.0.0:
-    resolution: {integrity: sha512-7h9Lb1kfvLecMUOX8wCbwjzCsgXdNDs8qpOsDuKV6YaGS9jDZHu4P5xTYLX78YepEUnwOw1atCYWzBUsJHWrzA==}
+  /ember-cli-htmlbars/6.0.1:
+    resolution: {integrity: sha512-IDsl9uty+MXtMfp/BUTEc/Q36EmlHYj8ZdPekcoRa8hmdsigHnK4iokfaB7dJFktlf6luruei+imv7JrJrBQPQ==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       '@ember/edition-utils': 1.2.0
@@ -5222,7 +5222,7 @@ packages:
       broccoli-postcss: 6.0.0
       debug: 4.3.3
       ember-cli-babel: 7.26.6
-      ember-cli-htmlbars: 6.0.0
+      ember-cli-htmlbars: 6.0.1
       ensure-posix-path: 1.1.1
       hash-string: 1.0.0
       lodash.merge: 4.6.2

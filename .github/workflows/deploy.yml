@@ -24,17 +24,10 @@ jobs:
       - run: pnpm install
       - run: pnpm build
 
-      - uses: webfactory/ssh-agent@v0.5.4
-        with:
-          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
-
       - uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
-          BASE_BRANCH: master
-          BRANCH: gh-pages
-          CLEAN: true
-          FOLDER: dist
-          GIT_CONFIG_NAME: LV Aachen e.V.
-          GIT_CONFIG_EMAIL: bot@lv-aachen.de
-          SINGLE_COMMIT: true
-          SSH: true
+          branch: gh-pages
+          folder: dist
+          git-config-name: LV Aachen e.V.
+          git-config-email: bot@lv-aachen.de
+          single-commit: true

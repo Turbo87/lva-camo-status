@@ -25,7 +25,7 @@ specifiers:
   ember-qunit: 5.1.5
   ember-resolver: 8.0.3
   ember-source: 4.1.0
-  ember-svg-jar: 2.3.3
+  ember-svg-jar: 2.3.4
   ember-template-lint: 4.0.0
   ember-test-selectors: 6.0.0
   eslint: 8.6.0
@@ -73,7 +73,7 @@ devDependencies:
   ember-qunit: 5.1.5_71cf3139f132abb8fb8e124dd974b045
   ember-resolver: 8.0.3
   ember-source: 4.1.0_webpack@5.65.0
-  ember-svg-jar: 2.3.3
+  ember-svg-jar: 2.3.4
   ember-template-lint: 4.0.0
   ember-test-selectors: 6.0.0
   eslint: 8.6.0
@@ -5402,9 +5402,9 @@ packages:
       - webpack
     dev: true
 
-  /ember-svg-jar/2.3.3:
-    resolution: {integrity: sha512-Obs8vEMKPfS2R48bKBAfNSLphFsDwUMRqi8TVKtlLE6okTXC8NebGg7pA/IutIGnakqJRAz4/dWAZyI74duDuQ==}
-    engines: {node: 8.* || >= 10.*}
+  /ember-svg-jar/2.3.4:
+    resolution: {integrity: sha512-EkY7fGeDevLROkDRsN+654THJT2b3cBVi8YH0v9mDofiASPBOlP3NgDs9q1WA1hU6cP68m08vXk/E40ayIVZzQ==}
+    engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       broccoli-caching-writer: 3.0.3
       broccoli-concat: 3.7.5
@@ -5417,6 +5417,7 @@ packages:
       cheerio: 0.22.0
       console-ui: 3.1.2
       ember-cli-babel: 7.26.11
+      ember-cli-htmlbars: 5.7.2
       json-stable-stringify: 1.0.1
       lodash: 4.17.21
       mkdirp: 0.5.5
@@ -11470,7 +11471,7 @@ packages:
   /wide-align/1.1.5:
     resolution: {integrity: sha512-eDMORYaPNZ4sQIuuYPDHdQvf4gyCF9rEEV/yPxGfwPkRodwEgiMUUXTx/dex+Me0wxx53S+NgUHaP7y3MGlDmg==}
     dependencies:
-      string-width: 1.0.2
+      string-width: 4.2.3
     dev: true
 
   /word-wrap/1.2.3:

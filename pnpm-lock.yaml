@@ -16,7 +16,7 @@ specifiers:
   ember-cli-inject-live-reload: 2.1.0
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
-  ember-concurrency: 2.2.0
+  ember-concurrency: 2.2.1
   ember-css-modules: 2.0.0
   ember-export-application-global: 2.0.1
   ember-fetch: 8.1.1
@@ -64,7 +64,7 @@ devDependencies:
   ember-cli-inject-live-reload: 2.1.0
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
-  ember-concurrency: 2.2.0
+  ember-concurrency: 2.2.1
   ember-css-modules: 2.0.0
   ember-export-application-global: 2.0.1
   ember-fetch: 8.1.1
@@ -5057,8 +5057,8 @@ packages:
       - '@babel/core'
     dev: true
 
-  /ember-concurrency/2.2.0:
-    resolution: {integrity: sha512-Ns1MH6t08oJqfeWQ4EMxyf6bLsXM87SbUPwGNUsg7idpikvkGr1PWqtvU6qxDTv1mA4Vrwdhv0I9yxN0ShH9Bg==}
+  /ember-concurrency/2.2.1:
+    resolution: {integrity: sha512-a4283Yq+jimxqoD5YaxQu7cXePHKqkNQfsT4fs0nYTz5PYbUd6wzUtelp6k8R1JTNPwDdxyVvUgu7yYoC8Sk5A==}
     engines: {node: 10.* || 12.* || 14.* || >= 16}
     dependencies:
       '@glimmer/tracking': 1.0.4

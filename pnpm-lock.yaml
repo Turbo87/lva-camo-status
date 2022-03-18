@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@babel/eslint-parser': 7.17.0
-  '@babel/plugin-proposal-decorators': 7.17.2
+  '@babel/plugin-proposal-decorators': 7.17.8
   '@ember/optional-features': 2.0.0
   '@ember/test-helpers': 2.6.0
   '@glimmer/component': 1.0.4
@@ -50,7 +50,7 @@ dependencies:
 
 devDependencies:
   '@babel/eslint-parser': 7.17.0_eslint@8.11.0
-  '@babel/plugin-proposal-decorators': 7.17.2
+  '@babel/plugin-proposal-decorators': 7.17.8
   '@ember/optional-features': 2.0.0
   '@ember/test-helpers': 2.6.0
   '@glimmer/component': 1.0.4
@@ -495,8 +495,8 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/plugin-proposal-decorators/7.17.2:
-    resolution: {integrity: sha512-WH8Z95CwTq/W8rFbMqb9p3hicpt4RX4f0K659ax2VHxgOyT6qQmUaEVEjIh4WR9Eh9NymkVn5vwsrE68fAQNUw==}
+  /@babel/plugin-proposal-decorators/7.17.8:
+    resolution: {integrity: sha512-U69odN4Umyyx1xO1rTII0IDkAEC+RNlcKXtqOblfpzqy1C+aOplb76BQNq0+XdpVkOaPlpEDwd++joY8FNFJKA==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -510,8 +510,8 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/plugin-proposal-decorators/7.17.2_@babel+core@7.17.5:
-    resolution: {integrity: sha512-WH8Z95CwTq/W8rFbMqb9p3hicpt4RX4f0K659ax2VHxgOyT6qQmUaEVEjIh4WR9Eh9NymkVn5vwsrE68fAQNUw==}
+  /@babel/plugin-proposal-decorators/7.17.8_@babel+core@7.17.5:
+    resolution: {integrity: sha512-U69odN4Umyyx1xO1rTII0IDkAEC+RNlcKXtqOblfpzqy1C+aOplb76BQNq0+XdpVkOaPlpEDwd++joY8FNFJKA==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -4632,7 +4632,7 @@ packages:
     dependencies:
       '@babel/core': 7.17.5
       '@babel/plugin-proposal-class-properties': 7.16.7_@babel+core@7.17.5
-      '@babel/plugin-proposal-decorators': 7.17.2_@babel+core@7.17.5
+      '@babel/plugin-proposal-decorators': 7.17.8_@babel+core@7.17.5
       '@babel/preset-env': 7.16.11_@babel+core@7.17.5
       '@embroider/macros': 1.5.0
       '@embroider/shared-internals': 1.5.0
@@ -4687,7 +4687,7 @@ packages:
       '@babel/core': 7.17.5
       '@babel/helper-compilation-targets': 7.16.7_@babel+core@7.17.5
       '@babel/plugin-proposal-class-properties': 7.16.7_@babel+core@7.17.5
-      '@babel/plugin-proposal-decorators': 7.17.2_@babel+core@7.17.5
+      '@babel/plugin-proposal-decorators': 7.17.8_@babel+core@7.17.5
       '@babel/plugin-proposal-private-methods': 7.16.11_@babel+core@7.17.5
       '@babel/plugin-proposal-private-property-in-object': 7.16.7_@babel+core@7.17.5
       '@babel/plugin-transform-modules-amd': 7.16.7_@babel+core@7.17.5

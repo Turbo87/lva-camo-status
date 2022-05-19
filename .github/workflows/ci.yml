@@ -24,7 +24,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 16.x
           cache: 'pnpm'
 
       - run: pnpm install
@@ -44,7 +44,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 16.x
           cache: 'pnpm'
 
       - run: pnpm install

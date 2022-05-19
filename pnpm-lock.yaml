@@ -26,7 +26,7 @@ specifiers:
   ember-resolver: 8.0.3
   ember-source: 4.4.0
   ember-svg-jar: 2.3.4
-  ember-template-lint: 4.8.0
+  ember-template-lint: 4.9.0
   ember-test-selectors: 6.0.0
   eslint: 8.15.0
   eslint-config-prettier: 8.5.0
@@ -74,7 +74,7 @@ devDependencies:
   ember-resolver: 8.0.3
   ember-source: 4.4.0_webpack@5.72.1
   ember-svg-jar: 2.3.4
-  ember-template-lint: 4.8.0
+  ember-template-lint: 4.9.0
   ember-test-selectors: 6.0.0
   eslint: 8.15.0
   eslint-config-prettier: 8.5.0_eslint@8.15.0
@@ -2251,7 +2251,7 @@ packages:
     dev: true
 
   /ansi-styles/2.2.1:
-    resolution: {integrity: sha1-tDLdM1i2NM914eRmQ2gkBTPB3b4=}
+    resolution: {integrity: sha512-kmCevFghRiWM7HB5zTPULl4r9bVFSWjz62MhqizDGUrq2NWuNMQyuv4tHHoKJHs69M/MF64lEcHdYIocrdWQYA==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -3939,7 +3939,7 @@ packages:
     dev: true
 
   /cli-cursor/2.1.0:
-    resolution: {integrity: sha1-s12sN2R5+sw+lHR9QdDQ9SOP/LU=}
+    resolution: {integrity: sha512-8lgKz8LmCRYZZQDpRyT2m5rKJ08TnU4tR9FFFW2rxpxR1FzWi4PQ/NfyODchAatHaUgnSPVcx/R5w6NuTBzFiw==}
     engines: {node: '>=4'}
     dependencies:
       restore-cursor: 2.0.0
@@ -5600,8 +5600,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-template-lint/4.8.0:
-    resolution: {integrity: sha512-cn28J9bFd1qXuF23Sb7ydyFto1N+n6XjS/TfcrxKJ4eK5Wew0Ix4RDAdHy/Gc29zD2K0sAuwCwMAIokwCLI9Kg==}
+  /ember-template-lint/4.9.0:
+    resolution: {integrity: sha512-corIvZ0DxcO6VUiBScePSrXCNT/aP1l3U4/6pL9+34iGMVVpkOKdkAr8ENJ0YTF3LszK8LfKNRMXM5IK1OaKWg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -5620,7 +5620,7 @@ packages:
       micromatch: 4.0.5
       resolve: 1.22.0
       v8-compile-cache: 2.3.0
-      yargs: 17.4.1
+      yargs: 17.5.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -11734,8 +11734,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /yargs/17.4.1:
-    resolution: {integrity: sha512-WSZD9jgobAg3ZKuCQZSa3g9QOJeCCqLoLAykiWgmXnDo9EPnn4RPf5qVTtzgOx66o6/oqhcA5tHtJXpG8pMt3g==}
+  /yargs/17.5.1:
+    resolution: {integrity: sha512-t6YAJcxDkNX7NFYiVtKvWUz8l+PaKTLiL63mJYWR2GnHq2gjEWISzsLp9wg3aY36dY1j+gfIEL3pIF+XlJJfbA==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 7.0.4

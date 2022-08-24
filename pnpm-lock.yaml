@@ -16,7 +16,7 @@ specifiers:
   ember-cli-inject-live-reload: 2.1.0
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
-  ember-concurrency: 2.2.1
+  ember-concurrency: 2.3.0
   ember-css-modules: 2.0.1
   ember-export-application-global: 2.0.1
   ember-fetch: 8.1.2
@@ -64,7 +64,7 @@ devDependencies:
   ember-cli-inject-live-reload: 2.1.0
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
-  ember-concurrency: 2.2.1
+  ember-concurrency: 2.3.0
   ember-css-modules: 2.0.1
   ember-export-application-global: 2.0.1
   ember-fetch: 8.1.2
@@ -6395,12 +6395,15 @@ packages:
       - supports-color
     dev: true
 
-  /ember-concurrency/2.2.1:
-    resolution: {integrity: sha512-a4283Yq+jimxqoD5YaxQu7cXePHKqkNQfsT4fs0nYTz5PYbUd6wzUtelp6k8R1JTNPwDdxyVvUgu7yYoC8Sk5A==}
+  /ember-concurrency/2.3.0:
+    resolution: {integrity: sha512-Y0l4wuxLa02KyBKjmkIUk1nCp640FOKGClbdQM8DONz7qeJiFOmxFazzlZjjbvXHIZwqOjGwHDrl9RA+ta5bJQ==}
     engines: {node: 10.* || 12.* || 14.* || >= 16}
     dependencies:
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/types': 7.18.9
       '@glimmer/tracking': 1.1.2
       ember-cli-babel: 7.26.11
+      ember-cli-babel-plugin-helpers: 1.1.1
       ember-cli-htmlbars: 5.7.2
       ember-compatibility-helpers: 1.2.6
       ember-destroyable-polyfill: 2.0.3

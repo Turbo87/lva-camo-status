@@ -16,7 +16,7 @@ specifiers:
   ember-cli-inject-live-reload: 2.1.0
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
-  ember-concurrency: 2.3.5
+  ember-concurrency: 2.3.6
   ember-css-modules: 2.0.1
   ember-export-application-global: 2.0.1
   ember-fetch: 8.1.2
@@ -64,7 +64,7 @@ devDependencies:
   ember-cli-inject-live-reload: 2.1.0
   ember-cli-sri: 2.1.1
   ember-cli-terser: 4.0.2
-  ember-concurrency: 2.3.5
+  ember-concurrency: 2.3.6
   ember-css-modules: 2.0.1
   ember-export-application-global: 2.0.1
   ember-fetch: 8.1.2
@@ -6411,8 +6411,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-concurrency/2.3.5:
-    resolution: {integrity: sha512-LAwERNKVP9SI5YRp5WtXiUnFwhMClk/m67XMddxok/of/YKnCSGAFnTAfyls/qam+JyOboO5Ggkd7PkIKlGpQw==}
+  /ember-concurrency/2.3.6:
+    resolution: {integrity: sha512-DN2o5FkZsZPdZa+vpnhwJdrVIpsj+lj5paARKcfwNsjnIq4bueaV+TDBhJnEMMgUn61bR39NQ6mrmxk40Jt+4A==}
     engines: {node: 10.* || 12.* || 14.* || >= 16}
     dependencies:
       '@babel/helper-plugin-utils': 7.19.0

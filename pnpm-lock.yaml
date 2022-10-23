@@ -25,7 +25,7 @@ specifiers:
   ember-qunit: 6.0.0
   ember-resolver: 8.0.3
   ember-source: 4.8.0
-  ember-svg-jar: 2.4.1
+  ember-svg-jar: 2.4.2
   ember-template-lint: 4.16.1
   ember-test-selectors: 6.0.0
   eslint: 8.26.0
@@ -73,7 +73,7 @@ devDependencies:
   ember-qunit: 6.0.0_ftw4mxvf7ajeaaqqi4c4fr6hay
   ember-resolver: 8.0.3
   ember-source: 4.8.0_gsocywzcpltb62s22lnmo6ims4
-  ember-svg-jar: 2.4.1
+  ember-svg-jar: 2.4.2
   ember-template-lint: 4.16.1_ember-cli-htmlbars@6.1.1
   ember-test-selectors: 6.0.0
   eslint: 8.26.0
@@ -5025,8 +5025,8 @@ packages:
       - webpack
     dev: true
 
-  /ember-svg-jar/2.4.1:
-    resolution: {integrity: sha512-zs5SUUOG/K/PvFIjzG7Rr2HT5go1IPC+TvOdwF/MsguDPREPoVUZMSPEAln/6q8OG8A+3DK/hHk2Q4Ot3KyDBg==}
+  /ember-svg-jar/2.4.2:
+    resolution: {integrity: sha512-TwtCwlxjp347+v7PK3xWpx7KXV3RDYogFe+WZA1+1ftiZqJfk9NzvXeMFA3thkhXmoT6IOYYnLR2ryjCmDiLsw==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       broccoli-caching-writer: 3.0.3

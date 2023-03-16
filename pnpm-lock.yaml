@@ -26,7 +26,7 @@ specifiers:
   ember-resolver: 8.1.0
   ember-source: 4.11.0
   ember-svg-jar: 2.4.2
-  ember-template-lint: 5.7.0
+  ember-template-lint: 5.7.1
   ember-test-selectors: 6.0.0
   eslint: 8.36.0
   eslint-config-prettier: 8.7.0
@@ -74,7 +74,7 @@ devDependencies:
   ember-resolver: 8.1.0
   ember-source: 4.11.0_j6mhgbor4xqonp65vkpdi5nj6q
   ember-svg-jar: 2.4.2
-  ember-template-lint: 5.7.0
+  ember-template-lint: 5.7.1
   ember-test-selectors: 6.0.0
   eslint: 8.36.0
   eslint-config-prettier: 8.7.0_eslint@8.36.0
@@ -5157,8 +5157,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-template-lint/5.7.0:
-    resolution: {integrity: sha512-y3Hb5xQsQKt3IgbD45xCXINRoTWmxUM425P2OXwMplZLo1feCWz3Jd6i+WxQFu0a6q3rnCdrCUh6lLoGtIB5XQ==}
+  /ember-template-lint/5.7.1:
+    resolution: {integrity: sha512-XYqBlu6rPEsgxSAAkuQCq7P0yEdhOaQYFHpQOLRl8iy4fex++cHbyeJNaN6QhzvQzVFSjJfHHdG1MMvHFzR2ow==}
     engines: {node: ^14.18.0 || ^16.0.0 || >= 18.0.0}
     hasBin: true
     dependencies:

@@ -76,8 +76,8 @@ devDependencies:
     specifier: 6.2.0
     version: 6.2.0(@ember/test-helpers@2.9.3)(ember-source@4.12.0)(qunit@2.19.4)(webpack@5.78.0)
   ember-resolver:
-    specifier: 8.1.0
-    version: 8.1.0(@babel/core@7.21.4)
+    specifier: 10.0.0
+    version: 10.0.0(@ember/string@3.0.1)(ember-source@4.12.0)
   ember-source:
     specifier: 4.12.0
     version: 4.12.0(@babel/core@7.21.4)(@glimmer/component@1.1.2)(webpack@5.78.0)
@@ -1432,6 +1432,15 @@ packages:
       inquirer: 7.3.3
       mkdirp: 1.0.4
       silent-error: 1.1.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@ember/string@3.0.1:
+    resolution: {integrity: sha512-ntnmXS+upOWVXE+rVw2l03DjdMnaGdWbYVUxUBuPJqnIGZu2XFRsoXc7E6mOw62s8i1Xh1RgTuFHN41QGIolEQ==}
+    engines: {node: 12.* || 14.* || >= 16}
+    dependencies:
+      ember-cli-babel: 7.26.11
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4980,18 +4989,20 @@ packages:
       - webpack
     dev: true
 
-  /ember-resolver@8.1.0(@babel/core@7.21.4):
-    resolution: {integrity: sha512-MGD7X2ztZVswGqs1mLgzhZJRhG7XiF6Mg4DgC7xJFWRYQQUHyGJpGdNWY9nXyrYnRIsCrQoL1do41zpxbrB/cg==}
-    engines: {node: '>= 10.*'}
+  /ember-resolver@10.0.0(@ember/string@3.0.1)(ember-source@4.12.0):
+    resolution: {integrity: sha512-e99wFJ4ZpleJ6JMEcIk4WEYP4s3nc+9/iNSXtwBHXC8ADJHJTeN3HjnT/eEbFbswdui4FYxIYuK+UCdP09811Q==}
+    engines: {node: 14.* || 16.* || >= 18}
+    peerDependencies:
+      '@ember/string': ^3.0.1
+      ember-source: ^4.8.3
+    peerDependenciesMeta:
+      ember-source:
+        optional: true
     dependencies:
-      babel-plugin-debug-macros: 0.3.4(@babel/core@7.21.4)
-      broccoli-funnel: 3.0.8
-      broccoli-merge-trees: 4.2.0
+      '@ember/string': 3.0.1
       ember-cli-babel: 7.26.11
-      ember-cli-version-checker: 5.1.2
-      resolve: 1.22.2
+      ember-source: 4.12.0(@babel/core@7.21.4)(@glimmer/component@1.1.2)(webpack@5.78.0)
     transitivePeerDependencies:
-      - '@babel/core'
       - supports-color
     dev: true
 

@@ -23,8 +23,8 @@ devDependencies:
     specifier: 2.0.0
     version: 2.0.0
   '@ember/test-helpers':
-    specifier: 2.9.3
-    version: 2.9.3(@babel/core@7.22.1)(ember-source@4.12.1)
+    specifier: 2.9.4
+    version: 2.9.4(@babel/core@7.22.1)(ember-source@4.12.1)
   '@glimmer/component':
     specifier: 1.1.2
     version: 1.1.2(@babel/core@7.22.1)
@@ -78,7 +78,7 @@ devDependencies:
     version: 1.0.0
   ember-qunit:
     specifier: 6.2.0
-    version: 6.2.0(@ember/test-helpers@2.9.3)(ember-source@4.12.1)(qunit@2.19.4)(webpack@5.87.0)
+    version: 6.2.0(@ember/test-helpers@2.9.4)(ember-source@4.12.1)(qunit@2.19.4)(webpack@5.87.0)
   ember-resolver:
     specifier: 10.1.0
     version: 10.1.0(@ember/string@3.1.1)(ember-source@4.12.1)
@@ -1590,8 +1590,8 @@ packages:
       - supports-color
     dev: true
 
-  /@ember/test-helpers@2.9.3(@babel/core@7.22.1)(ember-source@4.12.1):
-    resolution: {integrity: sha512-ejVg4Dj+G/6zyLvQsYOvmGiOLU6AS94tY4ClaO1E2oVvjjtVJIRmVLFN61I+DuyBg9hS3cFoPjQRTZB9MRIbxQ==}
+  /@ember/test-helpers@2.9.4(@babel/core@7.22.1)(ember-source@4.12.1):
+    resolution: {integrity: sha512-z+Qs1NYWyIVDmrY6WdmOS5mdG1lJ5CFfzh6dRhLfs9lq45deDaDrVNcaCYhnNeJZTvUBK2XR2SvPcZm0RloXdA==}
     engines: {node: 10.* || 12.* || 14.* || 15.* || >= 16.*}
     peerDependencies:
       ember-source: '>=3.8.0'
@@ -5130,7 +5130,7 @@ packages:
       - supports-color
     dev: true
 
-  /ember-qunit@6.2.0(@ember/test-helpers@2.9.3)(ember-source@4.12.1)(qunit@2.19.4)(webpack@5.87.0):
+  /ember-qunit@6.2.0(@ember/test-helpers@2.9.4)(ember-source@4.12.1)(qunit@2.19.4)(webpack@5.87.0):
     resolution: {integrity: sha512-mC+0bp8DwWzJLn8SW3GS8KDZIkl4yLsNYwMi5Dw6+aFllq7FM2crd/dfY4MuOIHK7GKdjtmWJTMGnjSpeSayaw==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
@@ -5138,7 +5138,7 @@ packages:
       ember-source: '>=3.28'
       qunit: ^2.13.0
     dependencies:
-      '@ember/test-helpers': 2.9.3(@babel/core@7.22.1)(ember-source@4.12.1)
+      '@ember/test-helpers': 2.9.4(@babel/core@7.22.1)(ember-source@4.12.1)
       broccoli-funnel: 3.0.8
       broccoli-merge-trees: 3.0.2
       common-tags: 1.8.2

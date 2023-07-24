@@ -57,7 +57,7 @@
     "eslint-plugin-qunit": "8.0.0",
     "loader.js": "4.7.0",
     "macro-decorators": "0.1.2",
-    "postcss-nested": "5.0.6",
+    "postcss-nested": "6.0.1",
     "prettier": "2.8.8",
     "qunit": "2.19.4",
     "qunit-dom": "2.0.0",

@@ -46,7 +46,7 @@
     "ember-qunit": "6.2.0",
     "ember-resolver": "10.1.1",
     "ember-source": "4.12.3",
-    "ember-svg-jar": "2.4.3",
+    "ember-svg-jar": "2.4.4",
     "ember-template-lint": "5.11.1",
     "ember-test-selectors": "6.0.0",
     "eslint": "8.46.0",

@@ -8,6 +8,7 @@ on:
   pull_request:
 
 env:
+  # renovate: datasource=npm depName=pnpm
   PNPM_VERSION: 8.15.8
 
 jobs:

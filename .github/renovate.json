@@ -1,26 +1,15 @@
 {
 	"extends": [
-		"config:js-app",
+		"config:best-practices",
+		":pinAllExceptPeerDependencies",
+		":maintainLockFilesWeekly",
+		":prConcurrentLimitNone",
+		":prHourlyLimitNone",
+		":semanticCommitsDisabled",
 		":automergePatch",
+		":automergeStableNonMajor",
 		":automergeLinters",
 		":automergeTesters",
-		":dependencyDashboard",
-		":maintainLockFilesWeekly",
-		":semanticCommitsDisabled"
-	],
-	"regexManagers": [
-		{
-			"fileMatch": ["^.github/workflows/[^\\.]+\\.ya?ml$"],
-			"matchStrings": ["PNPM_VERSION:\\s*(?<currentValue>.*?)\n"],
-			"depNameTemplate": "pnpm",
-			"datasourceTemplate": "npm"
-		}
-	],
-	"packageRules": [
-		{
-			"matchCurrentVersion": ">= 1.0.0",
-			"updateTypes": ["minor"],
-			"automerge": true
-		}
+		"customManagers:githubActionsVersions"
 	]
 }

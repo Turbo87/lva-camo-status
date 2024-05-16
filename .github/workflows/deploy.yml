@@ -6,28 +6,46 @@ on:
       - master
       - main
 
-jobs:
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
+env:
+  PNPM_VERSION: 8.9.2
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2.2.4
         with:
-          persist-credentials: false
+          version: ${{ env.PNPM_VERSION }}
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
+          cache: 'pnpm'
 
-      - run: npm install -g pnpm@6
       - run: pnpm install
-      - run: pnpm build
 
-      - uses: JamesIves/github-pages-deploy-action@v4.4.3
+      - run: pnpm build
+        env:
+          BASE_PATH: '/${{ github.event.repository.name }}'
+
+      - uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: dist
-          git-config-name: LV Aachen e.V.
-          git-config-email: bot@lv-aachen.de
-          single-commit: true
+          path: 'build/'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

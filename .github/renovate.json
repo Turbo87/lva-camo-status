@@ -1,34 +1,26 @@
 {
-  "extends": [
-    "config:js-app",
-    ":automergePatch",
-    ":automergeLinters",
-    ":automergeTesters",
-    ":dependencyDashboard",
-    ":maintainLockFilesWeekly",
-    ":semanticCommitsDisabled"
-  ],
-  "regexManagers": [
-    {
-      "fileMatch": ["^.github/workflows/[^\\.]+\\.ya?ml$"],
-      "matchStrings": ["PNPM_VERSION:\\s*(?<currentValue>.*?)\n"],
-      "depNameTemplate": "pnpm",
-      "datasourceTemplate": "npm"
-    }
-  ],
-  "packageRules": [
-    {
-      "matchCurrentVersion": ">= 1.0.0",
-      "updateTypes": ["minor"],
-      "automerge": true
-    },
-    {
-      "packageNames": [
-        "ember-cli",
-        "ember-data",
-        "ember-source"
-      ],
-      "separateMinorPatch": true
-    }
-  ]
+	"extends": [
+		"config:js-app",
+		":automergePatch",
+		":automergeLinters",
+		":automergeTesters",
+		":dependencyDashboard",
+		":maintainLockFilesWeekly",
+		":semanticCommitsDisabled"
+	],
+	"regexManagers": [
+		{
+			"fileMatch": ["^.github/workflows/[^\\.]+\\.ya?ml$"],
+			"matchStrings": ["PNPM_VERSION:\\s*(?<currentValue>.*?)\n"],
+			"depNameTemplate": "pnpm",
+			"datasourceTemplate": "npm"
+		}
+	],
+	"packageRules": [
+		{
+			"matchCurrentVersion": ">= 1.0.0",
+			"updateTypes": ["minor"],
+			"automerge": true
+		}
+	]
 }

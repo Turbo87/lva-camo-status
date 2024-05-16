@@ -24,12 +24,12 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
           cache: 'pnpm'
 
       - run: pnpm install
-      - run: pnpm lint:js
-      - run: pnpm lint:hbs
+      - run: pnpm lint
+      - run: pnpm check
 
   test:
     name: Tests
@@ -44,7 +44,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
           cache: 'pnpm'
 
       - run: pnpm install

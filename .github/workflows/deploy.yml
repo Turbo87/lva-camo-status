@@ -7,7 +7,7 @@ on:
       - main
 
 env:
-  PNPM_VERSION: 8.9.2
+  PNPM_VERSION: 8.15.8
 
 jobs:
   build:

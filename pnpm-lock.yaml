@@ -21,8 +21,8 @@ importers:
         specifier: 3.1.1
         version: 3.1.1(svelte@4.2.18)(vite@5.2.13(@types/node@20.14.2))
       '@testing-library/jest-dom':
-        specifier: 6.4.5
-        version: 6.4.5(vitest@1.6.0(@types/node@20.14.2)(jsdom@24.1.0))
+        specifier: 6.4.6
+        version: 6.4.6(vitest@1.6.0(@types/node@20.14.2)(jsdom@24.1.0))
       '@testing-library/svelte':
         specifier: 5.1.0
         version: 5.1.0(svelte@4.2.18)(vite@5.2.13(@types/node@20.14.2))(vitest@1.6.0(@types/node@20.14.2)(jsdom@24.1.0))
@@ -477,8 +477,8 @@ packages:
     resolution: {integrity: sha512-FlS4ZWlp97iiNWig0Muq8p+3rVDjRiYE+YKGbAqXOu9nwJFFOdL00kFpz42M+4huzYi86vAK1sOOfyOG45muIQ==}
     engines: {node: '>=14'}
 
-  '@testing-library/jest-dom@6.4.5':
-    resolution: {integrity: sha512-AguB9yvTXmCnySBP1lWjfNNUwpbElsaQ567lt2VdGqAdHtpieLgjmcVyv1q7PMIvLbgpDdkWV5Ydv3FEejyp2A==}
+  '@testing-library/jest-dom@6.4.6':
+    resolution: {integrity: sha512-8qpnGVincVDLEcQXWaHOf6zmlbwTKc6Us6PPu4CRnPXCzo2OGBS5cwgMMOWdxDpEz1mkbvXHpEy99M5Yvt682w==}
     engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
     peerDependencies:
       '@jest/globals': '>= 28'
@@ -2493,7 +2493,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.5(vitest@1.6.0(@types/node@20.14.2)(jsdom@24.1.0))':
+  '@testing-library/jest-dom@6.4.6(vitest@1.6.0(@types/node@20.14.2)(jsdom@24.1.0))':
     dependencies:
       '@adobe/css-tools': 4.4.0
       '@babel/runtime': 7.24.7

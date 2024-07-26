@@ -24,8 +24,8 @@ importers:
         specifier: 6.4.8
         version: 6.4.8
       '@testing-library/svelte':
-        specifier: 5.2.0
-        version: 5.2.0(svelte@4.2.18)(vite@5.3.5(@types/node@20.14.11))(vitest@2.0.4(@types/node@20.14.11)(jsdom@24.1.1))
+        specifier: 5.2.1
+        version: 5.2.1(svelte@4.2.18)(vite@5.3.5(@types/node@20.14.11))(vitest@2.0.4(@types/node@20.14.11)(jsdom@24.1.1))
       '@types/eslint':
         specifier: 9.6.0
         version: 9.6.0
@@ -473,8 +473,8 @@ packages:
     resolution: {integrity: sha512-JD0G+Zc38f5MBHA4NgxQMR5XtO5Jx9g86jqturNTt2WUfRmLDIY7iKkWHDCCTiDuFMre6nxAD5wHw9W5kI4rGw==}
     engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
 
-  '@testing-library/svelte@5.2.0':
-    resolution: {integrity: sha512-oMIFfxMcaPOXp+BQTRVgkeKzfAx7ee9fMrWaiKbMN36tN61kLl4Uj5ZZ/y1w9aL3a0BuBEoErV5iorYwCHqVUA==}
+  '@testing-library/svelte@5.2.1':
+    resolution: {integrity: sha512-yXSqBsYaQAeP2xt7gqKu135Q67+NTsBDcpL1akv5MVAQ/amb7AQ0zW5nzrquTIE2lvrc6q58KZhQA61Vc05ZOg==}
     engines: {node: '>= 10'}
     peerDependencies:
       svelte: ^3 || ^4 || ^5 || ^5.0.0-next.0
@@ -2256,7 +2256,7 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
 
-  '@testing-library/svelte@5.2.0(svelte@4.2.18)(vite@5.3.5(@types/node@20.14.11))(vitest@2.0.4(@types/node@20.14.11)(jsdom@24.1.1))':
+  '@testing-library/svelte@5.2.1(svelte@4.2.18)(vite@5.3.5(@types/node@20.14.11))(vitest@2.0.4(@types/node@20.14.11)(jsdom@24.1.1))':
     dependencies:
       '@testing-library/dom': 10.3.2
       svelte: 4.2.18

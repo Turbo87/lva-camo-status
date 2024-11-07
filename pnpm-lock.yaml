@@ -25,7 +25,7 @@ importers:
         version: 6.6.3
       '@testing-library/svelte':
         specifier: 5.2.4
-        version: 5.2.4(svelte@4.2.19)(vite@5.4.10(@types/node@22.8.7))(vitest@2.1.4(@types/node@22.8.7)(jsdom@24.1.3)(msw@2.6.1(@types/node@22.8.7)(typescript@5.6.3)))
+        version: 5.2.4(svelte@4.2.19)(vite@5.4.10(@types/node@22.8.7))(vitest@2.1.4(@types/node@22.8.7)(jsdom@24.1.3)(msw@2.6.2(@types/node@22.8.7)(typescript@5.6.3)))
       '@types/eslint':
         specifier: 9.6.1
         version: 9.6.1
@@ -48,8 +48,8 @@ importers:
         specifier: 24.1.3
         version: 24.1.3
       msw:
-        specifier: 2.6.1
-        version: 2.6.1(@types/node@22.8.7)(typescript@5.6.3)
+        specifier: 2.6.2
+        version: 2.6.2(@types/node@22.8.7)(typescript@5.6.3)
       prettier:
         specifier: 3.3.3
         version: 3.3.3
@@ -73,7 +73,7 @@ importers:
         version: 5.4.10(@types/node@22.8.7)
       vitest:
         specifier: 2.1.4
-        version: 2.1.4(@types/node@22.8.7)(jsdom@24.1.3)(msw@2.6.1(@types/node@22.8.7)(typescript@5.6.3))
+        version: 2.1.4(@types/node@22.8.7)(jsdom@24.1.3)(msw@2.6.2(@types/node@22.8.7)(typescript@5.6.3))
 
 packages:
 
@@ -96,8 +96,8 @@ packages:
     resolution: {integrity: sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==}
     engines: {node: '>=6.9.0'}
 
-  '@bundled-es-modules/cookie@2.0.0':
-    resolution: {integrity: sha512-Or6YHg/kamKHpxULAdSqhGqnWFneIXu1NKvvfBBzKGwpVsYuFIQ5aBPHDnnoR3ghW1nvSkALd+EF9iMtY7Vjxw==}
+  '@bundled-es-modules/cookie@2.0.1':
+    resolution: {integrity: sha512-8o+5fRPLNbjbdGRRmJj3h6Hh1AQJf2dk3qQ/5ZFb+PXkRNiSoMGGUKlsgLfrxneb72axVJyIYji64E2+nNfYyw==}
 
   '@bundled-es-modules/statuses@1.0.1':
     resolution: {integrity: sha512-yn7BklA5acgcBr+7w064fGV+SGIFySjCKpqjcWgBAIfrAkY+4GQTJJHQMeT3V/sgz23VTEVV8TtOmkvJAhFVfg==}
@@ -755,12 +755,12 @@ packages:
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
-  cookie@0.5.0:
-    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
-    engines: {node: '>= 0.6'}
-
   cookie@0.6.0:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
+    engines: {node: '>= 0.6'}
+
+  cookie@0.7.2:
+    resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
     engines: {node: '>= 0.6'}
 
   cross-spawn@7.0.3:
@@ -1240,8 +1240,8 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  msw@2.6.1:
-    resolution: {integrity: sha512-1MfqQlKLRWfhnzvPYwsCNE30pNrtoSBb65I/sB99eyRB0RONw//v9vjntygmbG7F5Ni/m9tOPv+flghGKCgy6Q==}
+  msw@2.6.2:
+    resolution: {integrity: sha512-RdRgPvjfuzMIACkWv7VOVAeSRYMU3ofokLv1w0RsbFX960qnj/tFEyOFXY0G2GTUd9trA6rHuHciM/FKpBp6/A==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -1863,9 +1863,9 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
-  '@bundled-es-modules/cookie@2.0.0':
+  '@bundled-es-modules/cookie@2.0.1':
     dependencies:
-      cookie: 0.5.0
+      cookie: 0.7.2
 
   '@bundled-es-modules/statuses@1.0.1':
     dependencies:
@@ -2192,13 +2192,13 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
 
-  '@testing-library/svelte@5.2.4(svelte@4.2.19)(vite@5.4.10(@types/node@22.8.7))(vitest@2.1.4(@types/node@22.8.7)(jsdom@24.1.3)(msw@2.6.1(@types/node@22.8.7)(typescript@5.6.3)))':
+  '@testing-library/svelte@5.2.4(svelte@4.2.19)(vite@5.4.10(@types/node@22.8.7))(vitest@2.1.4(@types/node@22.8.7)(jsdom@24.1.3)(msw@2.6.2(@types/node@22.8.7)(typescript@5.6.3)))':
     dependencies:
       '@testing-library/dom': 10.4.0
       svelte: 4.2.19
     optionalDependencies:
       vite: 5.4.10(@types/node@22.8.7)
-      vitest: 2.1.4(@types/node@22.8.7)(jsdom@24.1.3)(msw@2.6.1(@types/node@22.8.7)(typescript@5.6.3))
+      vitest: 2.1.4(@types/node@22.8.7)(jsdom@24.1.3)(msw@2.6.2(@types/node@22.8.7)(typescript@5.6.3))
 
   '@trysound/sax@0.2.0': {}
 
@@ -2315,13 +2315,13 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.4(msw@2.6.1(@types/node@22.8.7)(typescript@5.6.3))(vite@5.4.10(@types/node@22.8.7))':
+  '@vitest/mocker@2.1.4(msw@2.6.2(@types/node@22.8.7)(typescript@5.6.3))(vite@5.4.10(@types/node@22.8.7))':
     dependencies:
       '@vitest/spy': 2.1.4
       estree-walker: 3.0.3
       magic-string: 0.30.12
     optionalDependencies:
-      msw: 2.6.1(@types/node@22.8.7)(typescript@5.6.3)
+      msw: 2.6.2(@types/node@22.8.7)(typescript@5.6.3)
       vite: 5.4.10(@types/node@22.8.7)
 
   '@vitest/pretty-format@2.1.4':
@@ -2486,9 +2486,9 @@ snapshots:
 
   concat-map@0.0.1: {}
 
-  cookie@0.5.0: {}
-
   cookie@0.6.0: {}
+
+  cookie@0.7.2: {}
 
   cross-spawn@7.0.3:
     dependencies:
@@ -2988,9 +2988,9 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw@2.6.1(@types/node@22.8.7)(typescript@5.6.3):
+  msw@2.6.2(@types/node@22.8.7)(typescript@5.6.3):
     dependencies:
-      '@bundled-es-modules/cookie': 2.0.0
+      '@bundled-es-modules/cookie': 2.0.1
       '@bundled-es-modules/statuses': 1.0.1
       '@bundled-es-modules/tough-cookie': 0.1.6
       '@inquirer/confirm': 5.0.1(@types/node@22.8.7)
@@ -3437,10 +3437,10 @@ snapshots:
     optionalDependencies:
       vite: 5.4.10(@types/node@22.8.7)
 
-  vitest@2.1.4(@types/node@22.8.7)(jsdom@24.1.3)(msw@2.6.1(@types/node@22.8.7)(typescript@5.6.3)):
+  vitest@2.1.4(@types/node@22.8.7)(jsdom@24.1.3)(msw@2.6.2(@types/node@22.8.7)(typescript@5.6.3)):
     dependencies:
       '@vitest/expect': 2.1.4
-      '@vitest/mocker': 2.1.4(msw@2.6.1(@types/node@22.8.7)(typescript@5.6.3))(vite@5.4.10(@types/node@22.8.7))
+      '@vitest/mocker': 2.1.4(msw@2.6.2(@types/node@22.8.7)(typescript@5.6.3))(vite@5.4.10(@types/node@22.8.7))
       '@vitest/pretty-format': 2.1.4
       '@vitest/runner': 2.1.4
       '@vitest/snapshot': 2.1.4

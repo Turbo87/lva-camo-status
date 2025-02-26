@@ -9,7 +9,7 @@ on:
 
 env:
   # renovate: datasource=npm depName=pnpm
-  PNPM_VERSION: 10.5.0
+  PNPM_VERSION: 10.5.1
 
 jobs:
   lint:

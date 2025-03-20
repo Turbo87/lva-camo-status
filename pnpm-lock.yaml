@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@poppanator/sveltekit-svg':
-        specifier: 5.0.0
-        version: 5.0.0(rollup@4.36.0)(svelte@5.23.2)(svgo@3.3.2)(vite@6.2.2)
+        specifier: 5.0.1
+        version: 5.0.1(rollup@4.36.0)(svelte@5.23.2)(vite@6.2.2)
       '@sveltejs/adapter-static':
         specifier: 3.0.8
         version: 3.0.8(@sveltejs/kit@2.20.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.23.2)(vite@6.2.2))(svelte@5.23.2)(vite@6.2.2))
@@ -394,12 +394,11 @@ packages:
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
-  '@poppanator/sveltekit-svg@5.0.0':
-    resolution: {integrity: sha512-b7hk55SF0HjTS+xFgMG20hy6W0F/m+yRA/ZWcjnsa391rB3Ys3desCiUyIKQYcfvcyuRiQCPedUJMYgu00VdCA==}
+  '@poppanator/sveltekit-svg@5.0.1':
+    resolution: {integrity: sha512-eCOm9Wb1eO9N5N49JNokxgbUZN79QV/fe02cRrrWbDbcAOvGoIFU0YKDZEluIaFTP2zOtOxMeCSSobM4foMShA==}
     peerDependencies:
       svelte: '>=5.x'
-      svgo: '>=3.x'
-      vite: '>=5.x'
+      vite: '>=5.x || >= 6.x'
 
   '@rollup/pluginutils@5.1.4':
     resolution: {integrity: sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==}
@@ -2129,7 +2128,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@poppanator/sveltekit-svg@5.0.0(rollup@4.36.0)(svelte@5.23.2)(svgo@3.3.2)(vite@6.2.2)':
+  '@poppanator/sveltekit-svg@5.0.1(rollup@4.36.0)(svelte@5.23.2)(vite@6.2.2)':
     dependencies:
       '@rollup/pluginutils': 5.1.4(rollup@4.36.0)
       svelte: 5.23.2

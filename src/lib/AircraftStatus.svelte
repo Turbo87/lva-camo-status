@@ -2,9 +2,13 @@
 	import AircraftStatusUi from '$lib/AircraftStatusUi.svelte';
 	import { onMount } from 'svelte';
 
-	export let id: string;
-	export let callsign: string;
-	export let type: string | undefined = undefined;
+	interface Props {
+		id: string;
+		callsign: string;
+		type?: string | undefined;
+	}
+
+	let { id, callsign, type = undefined }: Props = $props();
 
 	type Response = {
 		camo: string | undefined;
@@ -14,17 +18,17 @@
 
 	let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
-	let isLoading = true;
-	let response: Response | null = null;
-	let error: unknown | null = null;
+	let isLoading = $state(true);
+	let response: Response | null = $state(null);
+	let error: unknown | null = $state(null);
 
-	$: type_ = type
+	let type_ = $derived(type
 		? type
 		: response?.['easa-type'] === response?.['easa-variant']
 			? response?.['easa-type']
-			: `${response?.['easa-type']} ${response?.['easa-variant']}`;
+			: `${response?.['easa-type']} ${response?.['easa-variant']}`);
 
-	$: status_ = isLoading
+	let status_ = $derived(isLoading
 		? 'loading'
 		: error
 			? 'error'
@@ -34,7 +38,7 @@
 					? 'grounded'
 					: response?.camo === 'prewarning'
 						? 'prewarning'
-						: 'unknown';
+						: 'unknown');
 
 	onMount(() => {
 		update();
@@ -68,4 +72,4 @@
 	}
 </script>
 
-<AircraftStatusUi {callsign} type={type_} status={status_} on:click={update} />
+<AircraftStatusUi {callsign} type={type_} status={status_} onClick={update} />

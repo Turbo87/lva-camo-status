@@ -5,12 +5,17 @@
 	import Error from '$lib/icons/error.svg?component';
 	import Refresh from '$lib/icons/refresh.svg?component';
 
-	export let callsign: string;
-	export let type: string | undefined = undefined;
-	export let status: string;
+	interface Props {
+		callsign: string;
+		type?: string | undefined;
+		status: string;
+		onClick: () => void;
+	}
+
+	let { callsign, type = undefined, status, onClick }: Props = $props();
 </script>
 
-<button type="button" data-status={status} on:click>
+<button type="button" data-status={status} onclick={onClick}>
 	<span class="callsign" data-test-callsign>{callsign}</span>
 	{#if type}
 		<span class="type" data-test-type>{type}</span>

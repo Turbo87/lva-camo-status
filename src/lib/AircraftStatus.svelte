@@ -22,23 +22,27 @@
 	let response: Response | null = $state(null);
 	let error: unknown | null = $state(null);
 
-	let type_ = $derived(type
-		? type
-		: response?.['easa-type'] === response?.['easa-variant']
-			? response?.['easa-type']
-			: `${response?.['easa-type']} ${response?.['easa-variant']}`);
+	let type_ = $derived(
+		type
+			? type
+			: response?.['easa-type'] === response?.['easa-variant']
+				? response?.['easa-type']
+				: `${response?.['easa-type']} ${response?.['easa-variant']}`
+	);
 
-	let status_ = $derived(isLoading
-		? 'loading'
-		: error
-			? 'error'
-			: response?.camo === 'airworthy'
-				? 'airworthy'
-				: response?.camo === 'grounded'
-					? 'grounded'
-					: response?.camo === 'prewarning'
-						? 'prewarning'
-						: 'unknown');
+	let status_ = $derived(
+		isLoading
+			? 'loading'
+			: error
+				? 'error'
+				: response?.camo === 'airworthy'
+					? 'airworthy'
+					: response?.camo === 'grounded'
+						? 'grounded'
+						: response?.camo === 'prewarning'
+							? 'prewarning'
+							: 'unknown'
+	);
 
 	onMount(() => {
 		update();

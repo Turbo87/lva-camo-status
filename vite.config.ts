@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => ({
 		})
 	],
 	resolve: {
-		conditions: mode === 'test' ? ['browser'] : []
+		conditions: ['browser']
 	},
 	test: {
 		environment: 'jsdom',

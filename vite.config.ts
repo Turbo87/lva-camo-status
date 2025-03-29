@@ -1,8 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import svg from '@poppanator/sveltekit-svg';
-import { defineConfig } from 'vitest/config';
 
-export default defineConfig(({ mode }) => ({
+const config = {
 	plugins: [
 		sveltekit(),
 		svg({
@@ -26,4 +25,6 @@ export default defineConfig(({ mode }) => ({
 		include: ['src/**/*.{test,spec}.{js,ts}'],
 		setupFiles: ['./vitest-setup.js']
 	}
-}));
+};
+
+export default config;

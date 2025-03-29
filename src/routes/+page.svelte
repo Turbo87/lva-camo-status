@@ -13,7 +13,6 @@
 
 <AircraftStatus id="2LWzettan" callsign="D-5074" type="ASK 21" />
 <AircraftStatus id="2o8VgT3ML" callsign="D-0578" type="LS 4" />
-<AircraftStatus id="33qsPAmAa" callsign="D-1896" type="LS 8" />
 <AircraftStatus id="bmknou8D" callsign="D-5424" type="Ka 6" />
 
 <style>

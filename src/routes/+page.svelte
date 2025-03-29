@@ -8,7 +8,6 @@
 <AircraftStatus id="2PQn9CjUB" callsign="D-0628" type="LS 8" />
 <AircraftStatus id="2wesNRmGV" callsign="D-KBBQ" type="Duo Discus XLT" />
 <AircraftStatus id="2JRWNcNfX" callsign="D-KUFP" type="HK36 Super Dimona" />
-<AircraftStatus id="26Gk3e81q" callsign="D-EFAC" type="DR 400/180R" />
 
 <h1 class="title">CAMO Status Nordstern</h1>
 

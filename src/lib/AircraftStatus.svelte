@@ -19,8 +19,8 @@
 	let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
 	let isLoading = $state(true);
-	let response: Response | null = $state(null);
-	let error: unknown | null = $state(null);
+	let response = $state<Response | null>(null);
+	let error = $state<unknown | null>(null);
 
 	let type_ = $derived(
 		type

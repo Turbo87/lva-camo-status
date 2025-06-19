@@ -4,6 +4,7 @@
 
 <h1 class="title">CAMO Status LVA</h1>
 
+<AircraftStatus id="2Nr6sRxrj" callsign="D-3886" type="Astir" />
 <AircraftStatus id="rACy6WHR" callsign="D-1108" type="LS 4" />
 <AircraftStatus id="2PQn9CjUB" callsign="D-0628" type="LS 8" />
 <AircraftStatus id="2wesNRmGV" callsign="D-KBBQ" type="Duo Discus XLT" />

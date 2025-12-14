@@ -50,7 +50,10 @@ fn fetch_and_parse(aircraft: &Aircraft) -> AircraftStatus {
             eprintln!("Failed to fetch status for {}: {e}", aircraft.id);
             return AircraftStatus {
                 callsign: aircraft.callsign.clone().unwrap_or("Unknown".to_string()),
-                aircraft_type: aircraft.aircraft_type.clone().unwrap_or("Unknown".to_string()),
+                aircraft_type: aircraft
+                    .aircraft_type
+                    .clone()
+                    .unwrap_or("Unknown".to_string()),
                 status: "error".to_string(),
             };
         }
@@ -62,7 +65,10 @@ fn fetch_and_parse(aircraft: &Aircraft) -> AircraftStatus {
             eprintln!("Failed to parse status for {}: {e}", aircraft.id);
             return AircraftStatus {
                 callsign: aircraft.callsign.clone().unwrap_or("Unknown".to_string()),
-                aircraft_type: aircraft.aircraft_type.clone().unwrap_or("Unknown".to_string()),
+                aircraft_type: aircraft
+                    .aircraft_type
+                    .clone()
+                    .unwrap_or("Unknown".to_string()),
                 status: "error".to_string(),
             };
         }

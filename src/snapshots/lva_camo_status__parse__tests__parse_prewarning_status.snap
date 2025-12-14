@@ -1,0 +1,11 @@
+---
+source: src/parse.rs
+expression: result
+---
+Ok(
+    ParsedStatus {
+        camo: "prewarning",
+        easa_type: "H 36",
+        easa_variant: "HK 36 R \"SUPER DIMONA\"",
+    },
+)

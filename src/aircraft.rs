@@ -1,4 +1,5 @@
 use std::fs;
+use std::path::Path;
 
 use serde::Deserialize;
 
@@ -15,8 +16,10 @@ struct AircraftList {
     aircraft: Vec<Aircraft>,
 }
 
-pub fn load_aircraft() -> Vec<Aircraft> {
-    let content = fs::read_to_string("aircraft.toml").expect("Failed to read aircraft.toml");
-    let list: AircraftList = toml::from_str(&content).expect("Failed to parse aircraft.toml");
+pub fn load_aircraft(path: &Path) -> Vec<Aircraft> {
+    let content = fs::read_to_string(path)
+        .unwrap_or_else(|e| panic!("Failed to read {}: {e}", path.display()));
+    let list: AircraftList = toml::from_str(&content)
+        .unwrap_or_else(|e| panic!("Failed to parse {}: {e}", path.display()));
     list.aircraft
 }

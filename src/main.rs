@@ -5,12 +5,22 @@ mod render;
 
 use std::collections::BTreeMap;
 use std::fs;
+use std::path::PathBuf;
 
 use aircraft::{Aircraft, load_aircraft};
+use clap::Parser;
 use render::{AircraftStatus, ClubStatus};
 
+#[derive(Parser)]
+struct Args {
+    /// Path to the aircraft TOML file
+    #[arg(default_value = "aircraft.toml")]
+    aircraft_file: PathBuf,
+}
+
 fn main() {
-    let aircraft_list = load_aircraft();
+    let args = Args::parse();
+    let aircraft_list = load_aircraft(&args.aircraft_file);
     let mut clubs_map: BTreeMap<&str, Vec<AircraftStatus>> = BTreeMap::new();
 
     for aircraft in &aircraft_list {

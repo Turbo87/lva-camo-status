@@ -255,7 +255,9 @@ name = "lva-camo-status"
 version = "0.0.0"
 dependencies = [
  "insta",
+ "minijinja",
  "scraper",
+ "serde",
  "thiserror",
  "ureq",
 ]
@@ -275,6 +277,15 @@ dependencies = [
  "log",
  "tendril",
  "web_atoms",
+]
+
+[[package]]
+name = "minijinja"
+version = "2.14.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "12ea9ac0a51fb5112607099560fdf0f90366ab088a2a9e6e8ae176794e9806aa"
+dependencies = [
+ "serde",
 ]
 
 [[package]]
@@ -531,6 +542,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9a8e94ea7f378bd32cbbd37198a4a91436180c5bb472411e48b5ec2e2124ae9e"
 dependencies = [
  "serde_core",
+ "serde_derive",
 ]
 
 [[package]]

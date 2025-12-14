@@ -4,4 +4,9 @@ version = "0.0.0"
 edition = "2024"
 
 [dependencies]
+scraper = "0.25.0"
+thiserror = "2.0.17"
 ureq = "3.1.4"
+
+[dev-dependencies]
+insta = "1.44.3"

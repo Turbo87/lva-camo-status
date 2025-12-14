@@ -1,0 +1,11 @@
+---
+source: src/parse.rs
+expression: result
+---
+Ok(
+    ParsedStatus {
+        camo: "grounded",
+        easa_type: "ASW 27",
+        easa_variant: "ASW 27-18 E",
+    },
+)

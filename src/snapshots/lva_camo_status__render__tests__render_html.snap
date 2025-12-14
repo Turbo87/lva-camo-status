@@ -65,6 +65,7 @@ expression: html
             font-size: 40px;
             line-height: 52px;
             margin: 0 8px;
+            font-variant-numeric: tabular-nums;
         }
 
         .type {

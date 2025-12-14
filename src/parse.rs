@@ -52,10 +52,10 @@ fn parse_definition_value(document: &Html, term: &'static str) -> Result<String,
 
     for (i, dt) in dts.iter().enumerate() {
         let dt_text = dt.text().collect::<String>();
-        if dt_text.trim() == term {
-            if let Some(dd) = dds.get(i) {
-                return Ok(dd.text().collect::<String>().trim().to_string());
-            }
+        if dt_text.trim() == term
+            && let Some(dd) = dds.get(i)
+        {
+            return Ok(dd.text().collect::<String>().trim().to_string());
         }
     }
 

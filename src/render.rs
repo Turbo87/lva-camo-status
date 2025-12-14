@@ -53,13 +53,11 @@ mod tests {
             },
         ];
 
-        let nordstern = vec![
-            AircraftStatus {
-                callsign: "D-5074".to_string(),
-                aircraft_type: "ASK 21".to_string(),
-                status: "prewarning".to_string(),
-            },
-        ];
+        let nordstern = vec![AircraftStatus {
+            callsign: "D-5074".to_string(),
+            aircraft_type: "ASK 21".to_string(),
+            status: "prewarning".to_string(),
+        }];
 
         let html = render_html(&lva, &nordstern).unwrap();
         assert_snapshot!(html);

@@ -5,13 +5,13 @@ mod render;
 
 use std::fs;
 
-use aircraft::{Aircraft, Club, AIRCRAFT};
+use aircraft::{AIRCRAFT, Aircraft, Club};
 use render::AircraftStatus;
 
 fn main() {
     let statuses: Vec<AircraftStatus> = AIRCRAFT
         .iter()
-        .map(|aircraft| fetch_and_parse(aircraft))
+        .map(fetch_and_parse)
         .collect();
 
     let lva: Vec<_> = statuses

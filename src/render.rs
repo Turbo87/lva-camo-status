@@ -11,23 +11,25 @@ pub struct AircraftStatus {
     pub status: String,
 }
 
+#[derive(Debug, Clone, Serialize)]
+pub struct ClubStatus {
+    pub name: String,
+    pub aircraft: Vec<AircraftStatus>,
+}
+
 #[derive(Debug, Error)]
 pub enum RenderError {
     #[error("Template error: {0}")]
     Template(#[from] minijinja::Error),
 }
 
-pub fn render_html(
-    lva_aircraft: &[AircraftStatus],
-    nordstern_aircraft: &[AircraftStatus],
-) -> Result<String, RenderError> {
+pub fn render_html(clubs: &[ClubStatus]) -> Result<String, RenderError> {
     let mut env = Environment::new();
     env.add_template("index.html", TEMPLATE)?;
 
     let template = env.get_template("index.html")?;
     let html = template.render(context! {
-        lva_aircraft => lva_aircraft,
-        nordstern_aircraft => nordstern_aircraft,
+        clubs => clubs,
     })?;
 
     Ok(html)
@@ -40,26 +42,33 @@ mod tests {
 
     #[test]
     fn test_render_html() {
-        let lva = vec![
-            AircraftStatus {
-                callsign: "D-3886".to_string(),
-                aircraft_type: "Astir".to_string(),
-                status: "airworthy".to_string(),
+        let clubs = vec![
+            ClubStatus {
+                name: "LVA".to_string(),
+                aircraft: vec![
+                    AircraftStatus {
+                        callsign: "D-3886".to_string(),
+                        aircraft_type: "Astir".to_string(),
+                        status: "airworthy".to_string(),
+                    },
+                    AircraftStatus {
+                        callsign: "D-1108".to_string(),
+                        aircraft_type: "LS 4".to_string(),
+                        status: "grounded".to_string(),
+                    },
+                ],
             },
-            AircraftStatus {
-                callsign: "D-1108".to_string(),
-                aircraft_type: "LS 4".to_string(),
-                status: "grounded".to_string(),
+            ClubStatus {
+                name: "Nordstern".to_string(),
+                aircraft: vec![AircraftStatus {
+                    callsign: "D-5074".to_string(),
+                    aircraft_type: "ASK 21".to_string(),
+                    status: "prewarning".to_string(),
+                }],
             },
         ];
 
-        let nordstern = vec![AircraftStatus {
-            callsign: "D-5074".to_string(),
-            aircraft_type: "ASK 21".to_string(),
-            status: "prewarning".to_string(),
-        }];
-
-        let html = render_html(&lva, &nordstern).unwrap();
+        let html = render_html(&clubs).unwrap();
         assert_snapshot!(html);
     }
 }

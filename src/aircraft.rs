@@ -4,6 +4,15 @@ pub enum Club {
     Nordstern,
 }
 
+impl Club {
+    pub fn name(self) -> &'static str {
+        match self {
+            Club::Lva => "LVA",
+            Club::Nordstern => "Nordstern",
+        }
+    }
+}
+
 #[derive(Debug, Clone)]
 pub struct Aircraft {
     pub id: &'static str,

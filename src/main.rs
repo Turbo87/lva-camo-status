@@ -6,39 +6,23 @@ mod render;
 use std::fs;
 
 use aircraft::{AIRCRAFT, Aircraft, Club};
-use render::AircraftStatus;
+use render::{AircraftStatus, ClubStatus};
 
 fn main() {
-    let statuses: Vec<AircraftStatus> = AIRCRAFT
-        .iter()
-        .map(fetch_and_parse)
-        .collect();
+    let clubs = [Club::Lva, Club::Nordstern].map(|club| {
+        let aircraft = AIRCRAFT
+            .iter()
+            .filter(|a| a.club == club)
+            .map(fetch_and_parse)
+            .collect();
 
-    let lva: Vec<_> = statuses
-        .iter()
-        .filter(|s| {
-            AIRCRAFT
-                .iter()
-                .find(|a| a.callsign == Some(s.callsign.as_str()))
-                .map(|a| a.club == Club::Lva)
-                .unwrap_or(false)
-        })
-        .cloned()
-        .collect();
+        ClubStatus {
+            name: club.name().to_string(),
+            aircraft,
+        }
+    });
 
-    let nordstern: Vec<_> = statuses
-        .iter()
-        .filter(|s| {
-            AIRCRAFT
-                .iter()
-                .find(|a| a.callsign == Some(s.callsign.as_str()))
-                .map(|a| a.club == Club::Nordstern)
-                .unwrap_or(false)
-        })
-        .cloned()
-        .collect();
-
-    let html = render::render_html(&lva, &nordstern).expect("Failed to render HTML");
+    let html = render::render_html(&clubs).expect("Failed to render HTML");
 
     fs::write("index.html", html).expect("Failed to write index.html");
     println!("Generated index.html");

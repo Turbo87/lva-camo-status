@@ -92,6 +92,7 @@ expression: html
     </style>
 </head>
 <body>
+    
     <h1 class="title">CAMO Status LVA</h1>
     
     
@@ -118,7 +119,7 @@ expression: html
 </div>
 
     
-
+    
     <h1 class="title">CAMO Status Nordstern</h1>
     
     
@@ -132,6 +133,7 @@ expression: html
     
 </div>
 
+    
     
 </body>
 </html>

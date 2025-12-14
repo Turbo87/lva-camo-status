@@ -111,14 +111,11 @@
     </style>
 </head>
 <body>
-    <h1 class="title">CAMO Status LVA</h1>
-    {% for aircraft in lva_aircraft %}
+    {% for club in clubs %}
+    <h1 class="title">CAMO Status {{ club.name }}</h1>
+    {% for aircraft in club.aircraft %}
     {{ aircraft_card(aircraft) }}
     {% endfor %}
-
-    <h1 class="title">CAMO Status Nordstern</h1>
-    {% for aircraft in nordstern_aircraft %}
-    {{ aircraft_card(aircraft) }}
     {% endfor %}
 </body>
 </html>

@@ -23,13 +23,14 @@ pub enum RenderError {
     Template(#[from] minijinja::Error),
 }
 
-pub fn render_html(clubs: &[ClubStatus]) -> Result<String, RenderError> {
+pub fn render_html(clubs: &[ClubStatus], rendered_at: &str) -> Result<String, RenderError> {
     let mut env = Environment::new();
     env.add_template("index.html", TEMPLATE)?;
 
     let template = env.get_template("index.html")?;
     let html = template.render(context! {
         clubs => clubs,
+        rendered_at => rendered_at,
     })?;
 
     Ok(html)
@@ -68,7 +69,7 @@ mod tests {
             },
         ];
 
-        let html = render_html(&clubs).unwrap();
+        let html = render_html(&clubs, "2025-01-01 12:00").unwrap();
         assert_snapshot!(html);
     }
 }

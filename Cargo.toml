@@ -4,6 +4,7 @@ version = "0.0.0"
 edition = "2024"
 
 [dependencies]
+chrono = "0.4.42"
 minijinja = "2.14.0"
 scraper = "0.25.0"
 serde = { version = "1.0.228", features = ["derive"] }

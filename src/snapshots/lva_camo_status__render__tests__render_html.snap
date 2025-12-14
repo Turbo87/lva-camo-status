@@ -89,6 +89,12 @@ expression: html
                 top: 22px;
             }
         }
+
+        .rendered-at {
+            margin: 24px 32px;
+            font-size: 14px;
+            color: #999;
+        }
     </style>
 </head>
 <body>
@@ -135,5 +141,6 @@ expression: html
 
     
     
+    <p class="rendered-at">Last updated: 2025-01-01 12:00</p>
 </body>
 </html>

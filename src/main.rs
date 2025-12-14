@@ -22,7 +22,8 @@ fn main() {
         }
     });
 
-    let html = render::render_html(&clubs).expect("Failed to render HTML");
+    let rendered_at = chrono::Utc::now().format("%Y-%m-%d %H:%M UTC").to_string();
+    let html = render::render_html(&clubs, &rendered_at).expect("Failed to render HTML");
 
     fs::write("index.html", html).expect("Failed to write index.html");
     println!("Generated index.html");

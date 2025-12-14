@@ -24,7 +24,6 @@ expression: html
         .aircraft {
             position: relative;
             display: block;
-            width: calc(100% - 16px);
             max-width: 450px;
             margin: 8px;
             padding: 16px;

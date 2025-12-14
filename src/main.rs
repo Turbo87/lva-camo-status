@@ -3,24 +3,27 @@ mod fetch;
 mod parse;
 mod render;
 
+use std::collections::BTreeMap;
 use std::fs;
 
-use aircraft::{AIRCRAFT, Aircraft, Club};
+use aircraft::{AIRCRAFT, Aircraft};
 use render::{AircraftStatus, ClubStatus};
 
 fn main() {
-    let clubs = [Club::Lva, Club::Nordstern].map(|club| {
-        let aircraft = AIRCRAFT
-            .iter()
-            .filter(|a| a.club == club)
-            .map(fetch_and_parse)
-            .collect();
+    let mut clubs_map: BTreeMap<&str, Vec<AircraftStatus>> = BTreeMap::new();
 
-        ClubStatus {
-            name: club.name().to_string(),
+    for aircraft in AIRCRAFT {
+        let status = fetch_and_parse(aircraft);
+        clubs_map.entry(aircraft.club).or_default().push(status);
+    }
+
+    let clubs: Vec<ClubStatus> = clubs_map
+        .into_iter()
+        .map(|(name, aircraft)| ClubStatus {
+            name: name.to_string(),
             aircraft,
-        }
-    });
+        })
+        .collect();
 
     let rendered_at = chrono::Utc::now().format("%Y-%m-%d %H:%M UTC").to_string();
     let html = render::render_html(&clubs, &rendered_at).expect("Failed to render HTML");

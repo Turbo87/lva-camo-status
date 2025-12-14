@@ -1,0 +1,47 @@
+[[aircraft]]
+id = "2Nr6sRxrj"
+callsign = "D-3886"
+aircraft_type = "Astir"
+club = "LVA"
+
+[[aircraft]]
+id = "rACy6WHR"
+callsign = "D-1108"
+aircraft_type = "LS 4"
+club = "LVA"
+
+[[aircraft]]
+id = "2PQn9CjUB"
+callsign = "D-0628"
+aircraft_type = "LS 8"
+club = "LVA"
+
+[[aircraft]]
+id = "2wesNRmGV"
+callsign = "D-KBBQ"
+aircraft_type = "Duo Discus XLT"
+club = "LVA"
+
+[[aircraft]]
+id = "2JRWNcNfX"
+callsign = "D-KUFP"
+aircraft_type = "HK36 Super Dimona"
+club = "LVA"
+
+[[aircraft]]
+id = "2LWzettan"
+callsign = "D-5074"
+aircraft_type = "ASK 21"
+club = "Nordstern"
+
+[[aircraft]]
+id = "2o8VgT3ML"
+callsign = "D-0578"
+aircraft_type = "LS 4"
+club = "Nordstern"
+
+[[aircraft]]
+id = "bmknou8D"
+callsign = "D-5424"
+aircraft_type = "Ka 6"
+club = "Nordstern"

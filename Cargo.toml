@@ -14,4 +14,4 @@ toml = "=0.9.8"
 ureq = "=3.1.4"
 
 [dev-dependencies]
-insta = "=1.44.3"
+insta = "=1.45.0"

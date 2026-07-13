@@ -4,7 +4,7 @@ version = "0.0.0"
 edition = "2024"
 
 [dependencies]
-chrono = "=0.4.43"
+chrono = "=0.4.45"
 clap = { version = "=4.6.1", features = ["derive"] }
 minijinja = "=2.21.0"
 scraper = "=0.27.0"

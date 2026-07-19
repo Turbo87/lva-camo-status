@@ -9,7 +9,7 @@ clap = { version = "=4.6.2", features = ["derive"] }
 minijinja = "=2.21.0"
 scraper = "=0.27.0"
 serde = { version = "=1.0.229", features = ["derive"] }
-thiserror = "=2.0.18"
+thiserror = "=2.0.19"
 toml = "=1.1.3"
 ureq = "=3.3.0"
 

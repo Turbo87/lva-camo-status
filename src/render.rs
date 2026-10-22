@@ -1,3 +1,4 @@
+use minijinja::value::Serde;
 use minijinja::{Environment, context};
 use serde::Serialize;
 use thiserror::Error;
@@ -29,7 +30,7 @@ pub fn render_html(clubs: &[ClubStatus], rendered_at: &str) -> Result<String, Re
 
     let template = env.get_template("index.html")?;
     let html = template.render(context! {
-        clubs => clubs,
+        clubs => Serde(clubs),
         rendered_at => rendered_at,
     })?;
 

@@ -10,7 +10,7 @@ minijinja = { version = "=3.0.5", features = ["serde"] }
 scraper = "=0.27.0"
 serde = { version = "=1.0.229", features = ["derive"] }
 thiserror = "=2.0.21"
-toml = "=1.1.8"
+toml = "=1.2.0"
 ureq = "=3.5.1"
 
 [dev-dependencies]
